@@ -1,0 +1,10 @@
+{
+    "name": "Radio Ciudad de Sauce 90.5 Mhz", 
+    "short_name": "Radio Ciudad",
+    "theme_color": "#43a048",
+    "background_color": "#43a048",
+    "display": "standalone",
+    "orientation": "portrait",
+    "scope": "./",
+    "start_url": "./?utm=homescreen"
+  }
