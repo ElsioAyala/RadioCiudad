@@ -583,3 +583,8 @@ footer {
         display: block;
     }
 } 
+
+iframe{
+    border: 0;
+    /*overflow: none;*/
+}
