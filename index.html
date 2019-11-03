@@ -15,24 +15,27 @@
 
     <!--Metatag windows-->
     <meta name="msapplication-TileColor" content="#43a048" />
-    <meta name="msapplication-TileImage" content="./img/ciudad-logo.svg" />
+    <!--<meta name="msapplication-TileImage" content="./img/ciudad-logo.svg" />-->
    
     <meta name="apple-mobile-web-app-status-bar-style" content="default" /><!--Que tipo de tema voy a aplicar a la barra de estatus-->
-    <link rel="apple-touch-startup-image" href="./img/ciudad-logo.svg" />
-    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <!--<link rel="apple-touch-startup-image" href="./img/ciudad-logo.svg" />-->
+    <!--<link rel="icon" type="image/x-icon" href="./favicon.ico" />-->
     
     <!--deteccion de icono de WPA-->
     <link rel="icon" type="image/png" href="./img/IconoRC.png" />
+    
    
     <!--metatags iOS-->
     <meta name="format-detection" content="telephone=no"><!--deteccion del telefono-->
     <meta name="apple-mobile-web-app-capable" content="yes" /><!--para que se comporte como aplicacion-->
     <meta name="apple-mobile-web-app-title" content="Radio Ciudad"><!--titulo de la aplicacion-->
-    <link rel="apple-touch-icon" href="./img/ciudad-logo.svg" /><!--icono (standar 192px)-->
+    <!--<link rel="apple-touch-icon" href="./img/ciudad-logo.svg" />--><!--icono (standar 192px)-->
 
     
     <link rel="author" type="text/plain" href="./humans.txt" />
     <link rel="sitemap" type="application/xml" title="Sitemap" href="./sitemap.xml" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     
     <meta property="og:title"       content="Radio Ciudad" />
@@ -111,7 +114,14 @@ data-vide-bg="video/particulas" data-vide-options="position: 0% 50%">
     <div class="l-container"></div>
     <header class="main-header">
         <div class="l-container flex">
-            <a href=""><img class="logo" src="./img/logo.png" alt="Logo Radio Ciudad" /></a>
+
+            
+            <a href="">
+                <picture>
+                    <source srcset="./img/logo.webp" >
+                    <img class="logo" src="./img/logo.png" alt="Logo Radio Ciudad" /> 
+                </picture>
+            </a>
 
 
         <div id="cont_9b00b0f8f9dec53d69373c2a13363046"><script type="text/javascript" async src="https://www.meteored.com.ar/wid_loader/9b00b0f8f9dec53d69373c2a13363046"></script></div>
@@ -129,18 +139,18 @@ data-vide-bg="video/particulas" data-vide-options="position: 0% 50%">
     </div>
 -->
 
-    <div class="live">
+    <div class="live" data-aos="zoom-in" data-aos-delay="200">
         <div class="l-container">
             <div class="live-slideshow"></div>
             <div class="live-radio">
                 <h3 class="live-radio__title">En vivo</h3>
                 <div class="live-radio__aire" id="programContainerElement">
                     
-                    <img class="live-radio__aire--img" src="./img/logo_905.png" alt="" id="imagen" />
+                    <!--<img class="live-radio__aire--img" src="" alt="" id="imagen"/>
                     <div class="live-radio__aire--description">
                         <p class="nombre" id="nombre"> RADIO CIUDAD </p>
                         <p class="conductor" id="conductor">Un lugar para todos!!</p>
-                    </div>
+                    </div>-->
 
 
                 </div>
@@ -208,7 +218,7 @@ data-vide-bg="video/particulas" data-vide-options="position: 0% 50%">
             </div>
         </div>
     </div>
-    <div class="mensaje">
+    <div class="mensaje" data-aos="zoom-in" data-aos-delay="200">
         <div class="l-container">
             <div class="mensaje-widget">
                 <h3 class="mensaje-widget__title">Dejanos Tu Mensaje</h3>
@@ -233,8 +243,13 @@ data-vide-bg="video/particulas" data-vide-options="position: 0% 50%">
                             <!--<img src="imagenes/PinoTechf.png" alt="Diseño"></a>--></p>
                     </div>
                     <div class="footer__container--powered_img">
+                        
                         <a href="https://www.facebook.com/elsio.ayala" target="_blank">
-                            <!--Powered By--><img src="./img/PinoTech.png" alt="Diseño" title="Diseño y Desarrollo Web"></a>
+                            <picture>
+                                <source type="image/webp" srcset="./img/PinoTech.webp">
+                                <img src="./img/PinoTech.png" alt="Elsio Ayala - Diseño y Desarrollo Web" title="Diseño y Desarrollo Web">
+                            </picture>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -248,10 +263,18 @@ data-vide-bg="video/particulas" data-vide-options="position: 0% 50%">
    
     <a href="https://www.meteored.com.ar/">Meteored</a>-->
     <!--<script src="./script.js"></script>-->
-    <script src="./javaScript.js"></script>
+
     <!----<script src="./jquery-3.3.1.min.js"></script>
     <script src="./jquery.vide.min.js"></script>-->
     <!--<a href="https://www.meteored.xx">/www.meteored.com.ar</a>-->
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./javaScript.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
 </body>
 
 </html>
