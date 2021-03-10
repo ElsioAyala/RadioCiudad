@@ -80,16 +80,16 @@ class Program extends Person {
 
 let programList = [
             //Avatar                 //nombre               //apelido           //facebook                          //Programa                   //Dias                     //HIni   //HFin    
-new Program(['Hugo'],               'Hugo',                 'Bechir',           ['100011691940069'],                'Identidad Correntina',     ['l','ma','mi','j','v','s'],'06:00', '09:00'),
-new Program(['Daniel', 'Laura'],   'Daniel Godoy y',       'Laura Medina',     ['elloku', '100007205203112'],      '🔥🔥 A Toda Potencia 💪',  ['l','ma','mi','j','v'],    '09:10','13:00'),
-new Program(['Vidente'],            '',                     '',                 ['#'],                              'Vidente Francisco',        ['l','ma','mi','j','v'],    '13:00','13:30'),
-new Program(['David', 'Alejandro'], 'David Gomes &',        'Alejandro Silva',  ['100009783664325','ale.silva.735'],'Defendiendo lo Nuestro',   ['l','ma','mi','j','v'],    '13:30','14:00'),
+new Program(['Juan'], 'Juan Ramon', 'Villalva', ['juanramon.villalva.31'], 'Sentimiento Chamamecero', ['l','ma','mi','j','v','s'],'06:00', '09:00'),
+new Program(['Daniel', 'Laura'], 'Daniel Godoy - ', 'Laura Medina',['elloku', '100007205203112'], '🔥🔥 A Toda Potencia 💪',  ['l','ma','mi','j','v'], '09:10','13:00'),
+new Program(['Vidente'],            '',                     '',                 ['#'],                              'Vidente Francisco',        ['l','ma','mi','j','v'],    '13:00','13:25'),
+new Program(['Silvana', 'Mino'],    'Silvana Silva &',        'Pedro Miño',  ['tuwachitiernasmys','pedro.mino.1232'],'Mundo Musical',   ['l','ma','mi','j','v'],    '13:30','15:00'),
 new Program(['Julia'],              'Julia',                'Fernandez',       ['100008413836572'],                 'Che Purajhéi',             ['l','ma','mi','j','v'],    '14:05','16:00'),
-new Program(['Daniel'],            'Daniel  ',             'Godoy',            ['elloku'],                         '☝️ Arriba La Tarde 💃',     ['l','ma','mi','j','v'],    '16:10','18:30'),
-new Program(['Jose'],               'José Fabian',          'Barrios (El Potro Dj)',['josefabian.barrios'],         'Tarde en la Ciudad',       ['l','ma','mi','j','v'],    '18:30','19:00'),
-new Program(['Alejandro'],          'Alejandro',            'Silva',            ['ale.silva.735'],                  'Atardecer Sauceño',        ['l','ma','mi','j','v'],    '19:10','20:30'),
-new Program(['Mino', 'Salvador'],   'Pedro Miño & ',        'Salvador Rosalez', ['#', 'salvador.rosalez.33'],       'Noches Litoraleñas',       ['l','ma','mi','j','v'],    '20:30','22:30'),
-new Program(['autoDj'],             'Auto DJ',              '',                 ['radiociudad.radiociudad'],        'Buena Musica 👌',          ['l','ma','mi','j','v'],    '22:50','23:59'),
+new Program(['Daniel'],            'Daniel  ',             'Godoy',            ['elloku'],                         '☝️ Arriba La Tarde 💃',     ['l','ma','mi','j','v'],    '16:10','18:00'),
+new Program(['Julia'],              'Julia',            'Fernandez',            ['100008413836572'],                'Che Purahéi',              ['l','ma','mi','j','v'],    '18:00','20:00'),
+/*new Program(['VirgenDelCarmen'],    '',            '', ['parroquia.virgendelcarmen.73'],   'Novena de la Virgen del Carmen - Noveno Día',        ['l','ma','mi','j','v'],    '20:15','21:30'),*/
+/*new Program(['Mino', 'Salvador'],   'Pedro Miño & ',        'Salvador Rosalez', ['#', 'salvador.rosalez.33'],       'Noches Litoraleñas',       ['l','ma','mi','j','v'],    '20:30','22:30'),*/
+new Program(['autoDj'],             'Auto DJ',              '',                 ['radiociudad.radiociudad'],        'Buena Musica 👌',          ['l','ma','mi','j','v'],    '20:10','23:59'),
 new Program(['autoDj'],             'Auto DJ',              '',                 ['radiociudad.radiociudad'],        'Buena Musica 👌',          ['l','ma','mi','j','v'],    '00:00','05:50'),
 
 new Program(['Daniel', 'Vanesa'],   'Daniel Godoy &',       'Vanesa silva Baez',['elloku', 'vanesa.baez.102'],      'Un Abrazo Radical 💯',    ['s'],                      '09:00','13:00'),
@@ -151,7 +151,7 @@ let preparando = program => {
 
 segunHora();
 
-
+/*(01)*/
 function segunHora() {
     for (const key in programList) {
         /** Si horaActual >= horaDeInicio y horaActual < horaDeFin y diaVerdadero */
@@ -204,3 +204,15 @@ let msToExpandedDateObj = ms => {
 let inicio = new Date('Sun Apr 29 2018 09:30:00 GMT-0300');
 let fin = new Date('Sun Apr 29 2018 13:00:00 GMT-0300');
 
+
+let btnActive = document.getElementById("active")
+
+
+
+function ola(){
+    alert("hola")
+}
+
+btnActive.addEventListener("click", () =>{
+    document.getElementById("btnToggle").classList.toggle("active")
+})
