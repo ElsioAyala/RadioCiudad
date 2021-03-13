@@ -78,30 +78,155 @@ class Program extends Person {
     }
 }
 
-let programList = [
-            //Avatar                 //nombre               //apelido           //facebook                          //Programa                   //Dias                     //HIni   //HFin    
-new Program(['Juan'], 'Juan Ramon', 'Villalva', ['juanramon.villalva.31'], 'Sentimiento Chamamecero', ['l','ma','mi','j','v','s'],'06:00', '09:00'),
-new Program(['Daniel', 'Laura'], 'Daniel Godoy - ', 'Laura Medina',['elloku', '100007205203112'], '🔥🔥 A Toda Potencia 💪',  ['l','ma','mi','j','v'], '09:10','13:00'),
-new Program(['Vidente'],            '',                     '',                 ['#'],                              'Vidente Francisco',        ['l','ma','mi','j','v'],    '13:00','13:25'),
-new Program(['Silvana', 'Mino'],    'Silvana Silva &',        'Pedro Miño',  ['tuwachitiernasmys','pedro.mino.1232'],'Mundo Musical',   ['l','ma','mi','j','v'],    '13:30','15:00'),
-new Program(['Julia'],              'Julia',                'Fernandez',       ['100008413836572'],                 'Che Purajhéi',             ['l','ma','mi','j','v'],    '14:05','16:00'),
-new Program(['Daniel'],            'Daniel  ',             'Godoy',            ['elloku'],                         '☝️ Arriba La Tarde 💃',     ['l','ma','mi','j','v'],    '16:10','18:00'),
-new Program(['Julia'],              'Julia',            'Fernandez',            ['100008413836572'],                'Che Purahéi',              ['l','ma','mi','j','v'],    '18:00','20:00'),
+let programList = [  
+new Program(
+    /*Avatar*/  ['Juan'], 
+    /*Nombre*/  'Juan Ramon', 
+    /*Apellido*/'Villalva', 
+    /*Facebook*/['juanramon.villalva.31'], 
+    /*Programa*/'Amor Chamamecero', 
+    /*Dias*/    ['l','ma','mi','j','v'],
+    /*Horario*/ '07:00', '09:00'),
+new Program(
+    ['Daniel', 
+    'Laura'], 
+    'Daniel Godoy - ', 
+    'Laura Medina',
+    ['elloku', '100007205203112']
+    , '🔥🔥 A Toda Potencia 💪', 
+    ['l','ma','mi','j','v'], 
+    '09:10','13:00'),
+new Program(
+    ['Vidente'],
+    '',
+    '',
+    ['#'],
+    'Vidente Francisco', 
+    ['l','ma','mi','j','v'],  
+    '13:00','13:25'),
+new Program(['autoDj', 
+    'Auto Dj'],    
+    '',       
+    '🕓16Hs ➡ Arriba la Tarde ',  
+    ['radiociudad.radiociudad'],
+    '🎶🎶🎶🎶',   
+    ['l','ma','mi','j','v'],    
+    '13:30','15:00'),
+new Program(
+    ['Daniel'],            
+    'Daniel  ',             
+    'Godoy',            
+    ['elloku'],                         
+    'Arriba La Tarde 😎',     
+    ['l','ma','mi','j','v'],    
+    '16:10','18:00'),
+new Program(['julia'],       
+    'Julia',         
+    'Fernandez',  
+    ['100008413836572'],             
+    'Che Purahéi',             
+    ['l','ma','mi','j','v'],   
+    '18:00','20:00'),
 /*new Program(['VirgenDelCarmen'],    '',            '', ['parroquia.virgendelcarmen.73'],   'Novena de la Virgen del Carmen - Noveno Día',        ['l','ma','mi','j','v'],    '20:15','21:30'),*/
 /*new Program(['Mino', 'Salvador'],   'Pedro Miño & ',        'Salvador Rosalez', ['#', 'salvador.rosalez.33'],       'Noches Litoraleñas',       ['l','ma','mi','j','v'],    '20:30','22:30'),*/
-new Program(['autoDj'],             'Auto DJ',              '',                 ['radiociudad.radiociudad'],        'Buena Musica 👌',          ['l','ma','mi','j','v'],    '20:10','23:59'),
-new Program(['autoDj'],             'Auto DJ',              '',                 ['radiociudad.radiociudad'],        'Buena Musica 👌',          ['l','ma','mi','j','v'],    '00:00','05:50'),
+new Program(
+    ['Silvana','Mino'],
+    'Silvana Silva - ',
+    'Pedro Miño',
+    ['tuwachitiernasmys', 'pedro.mino.1232'],
+    '🌎 Mundo Musical 🎶', 
+    ['l','ma','mi','j','v'],
+    '20:10','22:30'),
+new Program(
+    ['autoDj'],             
+    '',              
+    '',                 
+    ['radiociudad.radiociudad'],        
+    '🎶🎶🎶🎶',          
+    ['l','ma','mi','j','v'],    
+    '22:30','23:59'),
+new Program(
+    ['autoDj'],             
+    'The best night music',              
+    '',                 
+    ['radiociudad.radiociudad'],        
+    '🎶🎶🎶🎶',          
+    ['l','ma','mi','j','v'],    
+    '00:00','06:30'),
+new Program(
+    ['autoDj'],             
+    '🕖7Hs - Ya llega: Amor Chamamecero',              
+    '',                 
+    ['radiociudad.radiociudad'],        
+    '🎶🎶🎶🎶',          
+    ['l','ma','mi','j','v'],    
+    '06:30','07:00'),
 
-new Program(['Daniel', 'Vanesa'],   'Daniel Godoy &',       'Vanesa silva Baez',['elloku', 'vanesa.baez.102'],      'Un Abrazo Radical 💯',    ['s'],                      '09:00','13:00'),
-new Program(['autoDj',],         'Auto Dj',            '',            ['radiociudad.radiociudad'],                  '--',                       ['s'],                      '13:00','15:00'),
-new Program(['Jesus'],              'Fernando',    'More',    ['#'],                              'Jesus es el Camino',       ['s','d'],                  '16:00','17:00'),
-new Program(['Laura'],              'Laura',                'Medina',           ['100007205203112'],                'Show Music 🎼',           ['s'],                      '17:10','20:00'),
-new Program(['Sergio'],             'Sergio',               'Vallejo',          ['sergio.sonidos'],                 'Estilo Musical',           ['s'],                      '20:00','22:00'),
-new Program(['autoDj'],             'Auto DJ',              '',                 ['radiociudad.radiociudad'],        'ATR 💯',                  ['s'],                      '22:40', '00:00'),
-new Program(['autoDj'],             'Auto DJ',              '',                 ['radiociudad.radiociudad'],        'Buena Musica!! 💯',       ['d'],                      '00:00', '8:55'),
+new Program(
+    ['Daniel', 'Laura'],   
+    'Daniel Godoy &',       
+    'Laura Median',
+    ['elloku', '100007205203112'],      
+    'Un Abrazo Radical 💯',    
+    ['s'],                      
+    '09:00','13:00'),
 
-new Program(['Hugo'],               'Hugo',                 'Bechir',           ['100011691940069'],                'La Bailanta Chamamecera Dominguera', ['d'],            '09:00', '12:00'),
-new Program(['autoDj'],             'Auto DJ',              '',                 ['radiociudad.radiociudad'],        'Buena Musica 👌',            ['d'],                    '12:10', '23:00'),
+new Program(
+    ['autoDj',],         
+    'Auto Dj',            
+    '',            
+    ['radiociudad.radiociudad'],                  
+    '--',                       
+    ['s'],                      
+    '13:00','16:00'),
+
+new Program(
+    ['Jesus'],              
+    'Alicia',    
+    'Martinez',    
+    ['100000340133373'],                              
+    'Jesus es el Camino',       
+    ['s'],                  
+    '16:00','17:00'),
+
+new Program(['Juan','Malvina'],              
+'Juan Villalva -',                
+'Malvina Correa',           
+['juanramon.villalva.31', 'malvina.correa.7'],                
+'Variaciones Musicales 🎼',           
+['s','d'],                      
+'17:10','20:00'),
+
+/*
+new Program(['Sergio'],             'Sergio',               'Vallejo',          ['sergio.sonidos'],                 'Estilo Musical',           ['s'],                      '20:00','22:00'),*/
+new Program(
+    ['autoDj'],             
+    '🎶 🎶 🎶 🎶',              
+    '',                 
+    ['radiociudad.radiociudad'],        
+    'Sabado ATR 💯',                  
+    ['s'],                      
+    '20:05', '00:00'),
+
+new Program(
+    ['autoDj'],             
+    '🎶🎶🎶🎶',              
+    '',                 
+    ['radiociudad.radiociudad'],        
+    'Musica en la Ciudad',       
+    ['d'],                      
+    '00:00', '17:00'),
+/*
+new Program(['Hugo'],               'Hugo',                 'Bechir',           ['100011691940069'],                'La Bailanta Chamamecera Dominguera', ['d'],            '09:00', '12:00'),*/
+new Program(
+    ['autoDj'],             
+    '🎶🎶🎶🎶',              
+    '',                 
+    ['radiociudad.radiociudad'],        
+    'Musica en la Ciudad',            
+    ['d'],                    
+    '20:00', 
+    '00:00'),
 
 
 
