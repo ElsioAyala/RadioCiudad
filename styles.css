@@ -8,7 +8,7 @@
 }
 
 :root{
-    --background-page: url(./img/chico.webp);
+    --background-page: url(./img/chicox.jpg);
 }
 
 
@@ -658,7 +658,7 @@ iframe{
 @media screen and (min-width: 900px){
     body {
        
-        --background-page: url(./img/Grande.webp);
+        --background-page: url(./img/Grandex.jpg);
         /*--background-page: url(./img/grandge.jpg);*/
         
     }
