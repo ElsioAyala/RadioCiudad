@@ -104,13 +104,23 @@ new Program(
     'Vidente Francisco', 
     ['l','ma','mi','j','v'],  
     '13:00','13:25'),
-new Program(['autoDj'],    
+
+new Program(
+    ['Silvana','Mino'],
+    'Silvana Silva - ',
+    'Pedro Miño',
+    ['tuwachitiernasmys', 'pedro.mino.1232'],
+    'Mundo Musical ', 
+    ['l','ma','mi','j','v'],
+    '14:00','16:00'),
+    
+/*new Program(['autoDj'],    
     '',       
     '🕓16Hs ➡ Arriba la Tarde ',  
     ['radiociudad.radiociudad'],
     '🎶🎶🎶🎶',   
     ['l','ma','mi','j','v'],    
-    '13:30','16:00'),
+    '13:30','16:00'),*/
 new Program(
     ['Daniel'],            
     'Daniel  ',             
@@ -136,14 +146,7 @@ new Program(['julia', 'Laura'],
     '18:00','20:00'),
 /*new Program(['VirgenDelCarmen'],    '',            '', ['parroquia.virgendelcarmen.73'],   'Novena de la Virgen del Carmen - Noveno Día',        ['l','ma','mi','j','v'],    '20:15','21:30'),*/
 /*new Program(['Mino', 'Salvador'],   'Pedro Miño & ',        'Salvador Rosalez', ['#', 'salvador.rosalez.33'],       'Noches Litoraleñas',       ['l','ma','mi','j','v'],    '20:30','22:30'),*/
-new Program(
-    ['Silvana','Mino'],
-    'Silvana Silva - ',
-    'Pedro Miño',
-    ['tuwachitiernasmys', 'pedro.mino.1232'],
-    'Mundo Musical ', 
-    ['l','ma','mi','j','v'],
-    '20:10','22:30'),
+
 new Program(
     ['autoDj'],             
     '🎶 🎶 🎶 🎶',              
@@ -151,7 +154,7 @@ new Program(
     ['radiociudad.radiociudad'],        
     'Música en la Ciudad',          
     ['l','ma','mi','j','v'],    
-    '22:30','23:59'),
+    '20:10','23:59'),
 new Program(
     ['autoDj'],             
     '🎶 🎶 🎶 🎶',              
