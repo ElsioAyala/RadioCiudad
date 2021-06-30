@@ -122,7 +122,7 @@ new Program(
     ['l','ma','mi','j','v'],    
     '13:30','16:00'),*/
 new Program(
-    ['Daniel'],            
+    ['Godoy'],            
     'Daniel  ',             
     'Godoy',            
     ['elloku'],                         
