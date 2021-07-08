@@ -164,7 +164,7 @@ new Program(
     ['parroquia.virgendelcarmen.36'],             
     'Segundo Día de Novena',             
     ['l','ma','mi','j','v'],   
-    '19:00','21:30'),
+    '19:00','20:30'),
 
 /*new Program(['VirgenDelCarmen'],    '',            '', ['parroquia.virgendelcarmen.73'],   'Novena de la Virgen del Carmen - Noveno Día',        ['l','ma','mi','j','v'],    '20:15','21:30'),*/
 /*new Program(['Mino', 'Salvador'],   'Pedro Miño & ',        'Salvador Rosalez', ['#', 'salvador.rosalez.33'],       'Noches Litoraleñas',       ['l','ma','mi','j','v'],    '20:30','22:30'),*/
@@ -176,7 +176,7 @@ new Program(
     ['radiociudad.radiociudad'],        
     'Música en la Ciudad',          
     ['l','ma','mi','j','v'],    
-    '21:35','23:59'),
+    '20:40','23:59'),
 new Program(
     ['autoDj'],             
     '🎶 🎶 🎶 🎶',              

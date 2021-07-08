@@ -615,9 +615,9 @@ footer {
     margin-right: auto;
    
 }
-.raddios img{
+/*.raddios img{
     margin-top: 2em;
-}
+}*/
 @media screen and (min-width: 1485px){
     .center{
         position: absolute;
@@ -632,14 +632,18 @@ footer {
     margin: 0 auto;
     display: none;
 }
-@media screen and (min-width: 1024px){
+
+.raddios iframe{
+    width: 100%;
+}
+/*@media screen and (min-width: 1024px){
     .raddios{
         position: fixed;
         width: 300px;
         right: 1em;
         bottom: 8em;
     }
-}
+}*/
 .social-media{
     /*margin: 0px !important;*/
     display: none;
