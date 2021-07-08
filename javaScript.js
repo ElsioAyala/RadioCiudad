@@ -46,7 +46,7 @@ class Program extends Person {
     renderProgram(elementHTML){
         let program = 
         `<div class="containImg"> 
-            <a href="https://www.facebook.com/${this.profileFacebook[0]}" target="_blank"> 
+            <a href="https://www.facebook.com/${this.profileFacebook[0]}" target="_blank" title="Ver perfil de Facebook"> 
 
             ${this.avatar[0] == "autoDj"
             ?   `<img class="live-radio__aire--img" src="./img/${this.avatar[0]}.gif" alt="Avatar ${this.avatar[0]}" />
@@ -60,7 +60,7 @@ class Program extends Person {
                 
 
         ${this.avatar[1]
-            ?   `<a href="https://www.facebook.com/${this.profileFacebook[1]}" target="_blank"> 
+            ?   `<a href="https://www.facebook.com/${this.profileFacebook[1]}" target="_blank" title="Ver perfil de Facebook"> 
                     <picture>
                         <source type="image/webp" srcset="./img/${this.avatar[1]}.webp">
                         <img class="live-radio__aire--img" src="./img/${this.avatar[1]}.jpg" alt="Avatar ${this.avatar[0]}" id="imagen" data-aos="flip-right" data-aos-delay="1000"/>
@@ -103,7 +103,15 @@ new Program(
     ['#'],
     'Vidente Francisco', 
     ['l','ma','mi','j','v'],  
-    '13:00','13:25'),
+    '13:00','13:28'),
+
+new Program(['Publi'],    
+    '',       
+    '🕑 14Hs ➡ Mundo Musical ',  
+    ['radiociudad.radiociudad'],
+    'Espacio Publicitario',   
+    ['l','ma','mi','j','v'],    
+    '13:30','14:00'),
 
 new Program(
     ['Silvana','Mino'],
@@ -114,13 +122,14 @@ new Program(
     ['l','ma','mi','j','v'],
     '14:00','16:00'),
     
-/*new Program(['autoDj'],    
-    '',       
-    '🕓16Hs ➡ Arriba la Tarde ',  
+new Program(['Publi'],    
+    'Ya llega ',       
+    '➡ Arriba la Tarde',  
     ['radiociudad.radiociudad'],
-    '🎶🎶🎶🎶',   
+    'Espacio Publicitario',   
     ['l','ma','mi','j','v'],    
-    '13:30','16:00'),*/
+    '13:30','16:00'),
+
 new Program(
     ['Godoy'],            
     'Daniel  ',             
@@ -129,6 +138,8 @@ new Program(
     'Arriba La Tarde 😎',     
     ['l','ma','mi','j','v'],    
     '16:10','17:58'),
+
+
 new Program(
     ['Daniel'],            
     '🕕 Ya llega: ',             
@@ -137,13 +148,24 @@ new Program(
     'Arriba La Tarde 😎',     
     ['l','ma','mi','j','v'],    
     '16:58','18:00'),
+
 new Program(['julia', 'Laura'],       
     'Julia Fernandez - ',         
     'Laura Medina',  
     ['100008413836572'],             
     'Che Purahéi',             
     ['l','ma','mi','j','v'],   
-    '18:00','20:00'),
+    '18:00','18:59'),
+
+new Program(
+    ['Parroquia'],       
+    'Tú serás nuestro Dios, nosotros seremos tu pueblo, Señor',
+    '',
+    ['parroquia.virgendelcarmen.36'],             
+    'Segundo Día de Novena',             
+    ['l','ma','mi','j','v'],   
+    '19:00','21:30'),
+
 /*new Program(['VirgenDelCarmen'],    '',            '', ['parroquia.virgendelcarmen.73'],   'Novena de la Virgen del Carmen - Noveno Día',        ['l','ma','mi','j','v'],    '20:15','21:30'),*/
 /*new Program(['Mino', 'Salvador'],   'Pedro Miño & ',        'Salvador Rosalez', ['#', 'salvador.rosalez.33'],       'Noches Litoraleñas',       ['l','ma','mi','j','v'],    '20:30','22:30'),*/
 
@@ -154,7 +176,7 @@ new Program(
     ['radiociudad.radiociudad'],        
     'Música en la Ciudad',          
     ['l','ma','mi','j','v'],    
-    '20:10','23:59'),
+    '20:30','23:59'),
 new Program(
     ['autoDj'],             
     '🎶 🎶 🎶 🎶',              
@@ -220,10 +242,10 @@ new Program(['Juan2',
 new Program(['Sergio'],             'Sergio',               'Vallejo',          ['sergio.sonidos'],                 'Estilo Musical',           ['s'],                      '20:00','22:00'),*/
 new Program(
     ['autoDj'],             
-    '🎶🎶🎶🎶',              
+    'Dardo Seitur',              
     '',                 
     ['radiociudad.radiociudad'],        
-    'Sabado ATR 💯',                  
+    'Punto de Encuentro',                  
     ['s'],                      
     '20:05', '23:59'),
 

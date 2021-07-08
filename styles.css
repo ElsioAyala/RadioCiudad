@@ -9,6 +9,7 @@
 
 :root{
     --background-page: url(./img/chicox.jpg);
+    /*--background-page: url(./img/Grandex.jpg);*/
 }
 
 
@@ -647,7 +648,13 @@ footer {
 @media screen and (min-width: 1024px){
     .social-media{
         display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        /*margin-bottom: .5em;*/
     }
+    /*.social-media:last-child{
+        margin-bottom: 0;
+    }*/
 } 
 
 iframe{
@@ -658,7 +665,8 @@ iframe{
 @media screen and (min-width: 900px){
     body {
        
-        --background-page: url(./img/Grandex.jpg);
+        /*--background-page: url(./img/Grandex.jpg);*/
+
         /*--background-page: url(./img/grandge.jpg);*/
         
     }
@@ -673,6 +681,9 @@ div#contolBar.controlBar{
     /*display: flex;*/
     color: #444;
     font-family: sans-serif;
+    /*display: flex;
+    align-items: center;
+    justify-content: flex-end;*/
 }
 .social-media-contac{
     display: flex;
@@ -683,7 +694,12 @@ div#contolBar.controlBar{
 .social-media-contac a {
     color: inherit;
     font-size: 1.1em;
+    margin-bottom: .4em
     /*font-weight: bold;*/
+}
+.social-media-contac a:last-child {
+    margin-bottom: 0;
+
 }
 
 .social-media-contac i {
@@ -692,7 +708,7 @@ div#contolBar.controlBar{
 }
 
 .social-media-contac i:first-child {
-    margin-bottom: .5em;
+    /*margin-bottom: .5em;*/
 }
 
 @media screen and (max-width: 425px){
