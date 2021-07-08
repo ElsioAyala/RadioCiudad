@@ -176,7 +176,7 @@ new Program(
     ['radiociudad.radiociudad'],        
     'Música en la Ciudad',          
     ['l','ma','mi','j','v'],    
-    '20:30','23:59'),
+    '21:35','23:59'),
 new Program(
     ['autoDj'],             
     '🎶 🎶 🎶 🎶',              
