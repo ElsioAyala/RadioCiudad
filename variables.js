@@ -12,7 +12,7 @@ function responsiveMedia (mq, img) {
             style.setProperty('--background-page', `url(./img/0${img}movil.jpg)`);
         }
     }
-    breakpoint.addListener(responsive);
+    /*breakpoint.addListener(responsive);*/
     responsive(breakpoint);
 
 }
