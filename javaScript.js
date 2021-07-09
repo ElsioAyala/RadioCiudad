@@ -159,10 +159,10 @@ new Program(['julia', 'Laura'],
 
 new Program(
     ['Parroquia'],       
-    'Tú serás nuestro Dios, nosotros seremos tu pueblo, Señor',
+    'Servidores de todos por amor a Jesucristo',
     '',
     ['parroquia.virgendelcarmen.36'],             
-    'Segundo Día de Novena',             
+    'Tercer Día de Novena',             
     ['l','ma','mi','j','v'],   
     '19:00','20:30'),
 
