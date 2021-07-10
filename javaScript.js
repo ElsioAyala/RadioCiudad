@@ -79,7 +79,18 @@ class Program extends Person {
 }
 
 let programList = [  
+
 new Program(
+    ['autoDj'],             
+    '🕖7Hs - Ya llega: Amor Chamamecero',              
+    '',                 
+    ['radiociudad.radiociudad'],        
+    '🎶🎶🎶🎶',          
+    ['l','ma','mi','j','v'],    
+    '06:30','07:00'),
+
+
+    new Program(
     /*Avatar*/  ['Juan'], 
     /*Nombre*/  'Juan Ramón', 
     /*Apellido*/'Villalva', 
@@ -87,6 +98,17 @@ new Program(
     /*Programa*/'Sentimiento de Amor Chamamecero', 
     /*Dias*/    ['l','ma','mi','j','v'],
     /*Horario*/ '07:00', '09:00'),
+
+new Program(
+    ['Publi'], 
+    '🕘 Ya llega: A Toda Potencia ', 
+    '',
+    ['adiociudad.radiociudad'],
+    'Espacio Publicitario', 
+    ['l','ma','mi','j','v'], 
+    '09:10','13:00'),
+
+
 new Program(
     ['Daniel', 
     'Laura'], 
@@ -96,6 +118,7 @@ new Program(
     , '🔥🔥 A Toda Potencia 💪', 
     ['l','ma','mi','j','v'], 
     '09:10','13:00'),
+
 new Program(
     ['Vidente'],
     '',
@@ -123,12 +146,12 @@ new Program(
     '14:00','16:00'),
     
 new Program(['Publi'],    
-    'Ya llega ',       
-    '➡ Arriba la Tarde',  
+    '🕓 Ya llega: ',       
+    'Arriba la Tarde',  
     ['radiociudad.radiociudad'],
     'Espacio Publicitario',   
     ['l','ma','mi','j','v'],    
-    '13:30','16:00'),
+    '16:00','16:10'),
 
 new Program(
     ['Godoy'],            
@@ -147,7 +170,7 @@ new Program(
     ['elloku'],                         
     'Arriba La Tarde 😎',     
     ['l','ma','mi','j','v'],    
-    '16:58','18:00'),
+    '17:58','18:00'),
 
 new Program(['julia', 'Laura'],       
     'Julia Fernandez - ',         
@@ -155,19 +178,30 @@ new Program(['julia', 'Laura'],
     ['100008413836572'],             
     'Che Purahéi',             
     ['l','ma','mi','j','v'],   
-    '18:00','18:59'),
+    '18:00','18:55'),
 
-new Program(
-    ['Parroquia'],       
-    'Todos estamos llamados a ser santos',
-    '',
-    ['parroquia.virgendelcarmen.36'],             
-    'Cuarto Día de Novena',             
-    ['l','ma','mi','j','v'],   
-    '19:00','20:30'),
+/*--------- Inicio Programación Especial ---------*/
 
-/*new Program(['VirgenDelCarmen'],    '',            '', ['parroquia.virgendelcarmen.73'],   'Novena de la Virgen del Carmen - Noveno Día',        ['l','ma','mi','j','v'],    '20:15','21:30'),*/
-/*new Program(['Mino', 'Salvador'],   'Pedro Miño & ',        'Salvador Rosalez', ['#', 'salvador.rosalez.33'],       'Noches Litoraleñas',       ['l','ma','mi','j','v'],    '20:30','22:30'),*/
+    new Program(['julia', 'Laura'],       
+        '🕖 19Hs:  Transmisión Quinto dia de Novena',         
+        '',  
+        ['100008413836572'],             
+        'Che Purahéi',             
+        ['l','ma','mi','j','v'],   
+        '18:55','19:00'),
+
+
+    new Program(
+        ['Parroquia'],       
+        'Todos estamos llamados a ser santos',
+        '',
+        ['parroquia.virgendelcarmen.36'],             
+        'Cuarto Día de Novena',             
+        ['l','ma','mi','j','v','s','d'],   
+        '19:00','20:30'),
+
+/*----------- Fin Programación Especial ---------*/
+
 
 new Program(
     ['autoDj'],             
@@ -177,6 +211,8 @@ new Program(
     'Música en la Ciudad',          
     ['l','ma','mi','j','v'],    
     '20:40','23:59'),
+
+
 new Program(
     ['autoDj'],             
     '🎶 🎶 🎶 🎶',              
@@ -185,6 +221,7 @@ new Program(
     '⭐ Música en la Ciudad ⭐',          
     ['l','ma','mi','j','v','s'],    
     '00:00','06:30'),
+
 new Program(
     ['autoDj'],             
     '🕘9Hs ➡ Un Abrazo Radical',              
@@ -193,14 +230,6 @@ new Program(
     '⭐ Música en la Ciudad ⭐',          
     ['s'],    
     '06:30','09:00'),
-new Program(
-    ['autoDj'],             
-    '🕖7Hs - Ya llega: Amor Chamamecero',              
-    '',                 
-    ['radiociudad.radiociudad'],        
-    '🎶🎶🎶🎶',          
-    ['l','ma','mi','j','v'],    
-    '06:30','07:00'),
 
 new Program(
     ['Daniel', 'Laura'],   
@@ -212,13 +241,21 @@ new Program(
     '09:00','13:00'),
 
 new Program(
-    ['autoDj',],         
-    '🎶 🎶',            
-    '',            
-    ['radiociudad.radiociudad'],                  
-    'Música en la Ciudad',                       
-    ['s'],                      
-    '13:00','16:00'),
+    ['Publi'],             
+    'Ya llega: Variaciones Musicales',              
+    '',                 
+    ['radiociudad.radiociudad'],        
+    'Espacio Publicitario',          
+    ['s'],    
+    '13:00','13:10'),
+
+new Program(['Juan2'],              
+    'Juan Ramón Villalva',                
+    '',           
+    ['juanramon.villalva.31'],                
+    'Variaciones Musicales',           
+    ['s','d'],                      
+    '13:10','16:00'),
 
 new Program(
     ['Jesus'],              
@@ -229,18 +266,19 @@ new Program(
     ['s'],                  
     '16:00','17:00'),
 
-new Program(['Juan2',
-'Malvina2'],              
-'Juan Ramón Villalva -',                
-'Malvina Correa',           
-['juanramon.villalva.31', 'malvina.correa.7'],                
-'Variaciones Musicales 🎼',           
-['s','d'],                      
-'17:10','20:00'),
+/*new Program(
+    ['autoDj',],         
+    'Radio Ciudad',            
+    '',            
+    ['radiociudad.radiociudad'],                  
+    '🕗 8Hs - Punto de Encuentro',                       
+    ['s'],                      
+    '17:10','20:00'),
+*/
 
-/*
-new Program(['Sergio'],             'Sergio',               'Vallejo',          ['sergio.sonidos'],                 'Estilo Musical',           ['s'],                      '20:00','22:00'),*/
-new Program(
+
+
+/*new Program(
     ['autoDj'],             
     'Dardo Seitur',              
     '',                 
@@ -248,6 +286,43 @@ new Program(
     'Punto de Encuentro',                  
     ['s'],                      
     '20:05', '23:59'),
+*/
+
+/*------------- Inicio progranación Especial --------------*/
+new Program(
+    ['autoDj'],             
+    '🎶🎶🎶🎶',              
+    '',                 
+    ['radiociudad.radiociudad'],        
+    'Música en la Ciudad',       
+    ['s'],                      
+    '17:10', '18:00'),
+new Program(
+    ['autoDj'],             
+    '🕖19Hs - Transmisión Cuarto día de Novena',              
+    '',                 
+    ['radiociudad.radiociudad'],        
+    'Música en la Ciudad',       
+    ['s', 'd'],                      
+    '18:00', '19:00'),
+new Program(
+    ['autoDj'],             
+    '🎶🎶🎶🎶',              
+    '',                 
+    ['radiociudad.radiociudad'],        
+    'Música en la Ciudad',       
+    ['s', 'd'],                      
+    '20:30', '23:59'),
+
+new Program(
+    ['autoDj'],             
+    '🎶🎶🎶🎶',              
+    '',                 
+    ['radiociudad.radiociudad'],        
+    'Música en la Ciudad',            
+    ['d'],                    
+    '16:00', '18:00'),
+/*------------ Fin programación Especial -----------------*/
 
 new Program(
     ['autoDj'],             
@@ -256,17 +331,19 @@ new Program(
     ['radiociudad.radiociudad'],        
     'Música en la Ciudad',       
     ['d'],                      
-    '00:00', '17:00'),
+    '00:00', '13:00'),
+
+
 /*
 new Program(['Hugo'],               'Hugo',                 'Bechir',           ['100011691940069'],                'La Bailanta Chamamecera Dominguera', ['d'],            '09:00', '12:00'),*/
-new Program(
+/*new Program(
     ['autoDj'],             
     '🎶🎶🎶🎶',              
     '',                 
     ['radiociudad.radiociudad'],        
     'Música en la Ciudad',            
     ['d'],                    
-    '20:00', '00:00'),
+    '16:00', '23:59'),*/
 
 
 
