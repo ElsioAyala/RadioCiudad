@@ -28,9 +28,9 @@ let fecha = new Date();
 let hora = fecha.getHours();
 
 if (hora >= 6 && hora <= 18) {
-    responsiveMedia("(min-width: 900px)", generarAletorio(9,9));
+    responsiveMedia("(min-width: 900px)", generarAletorio(5,5));
 }else if(hora >= 19 && hora <= 21){
     responsiveMedia("(min-width: 900px)", generarAletorio(8,8));
 }else{
-    responsiveMedia("(min-width: 900px)", generarAletorio(9,9));
+    responsiveMedia("(min-width: 900px)", generarAletorio(6,7));
 }
