@@ -634,7 +634,7 @@ footer {
 }
 
 .raddios iframe{
-    /*width: 100%;*/
+    width: 100%;
     max-width: 500px;
 }
 /*@media screen and (min-width: 1024px){
@@ -645,6 +645,14 @@ footer {
         bottom: 8em;
     }
 }*/
+
+@media screen and (max-width: 425px){
+    .raddios{
+        height: 200px;
+    }
+}
+
+
 .social-media{
     /*margin: 0px !important;*/
     display: none;

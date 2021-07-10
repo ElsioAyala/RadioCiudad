@@ -159,10 +159,10 @@ new Program(['julia', 'Laura'],
 
 new Program(
     ['Parroquia'],       
-    'Servidores de todos por amor a Jesucristo',
+    'Todos estamos llamados a ser santos',
     '',
     ['parroquia.virgendelcarmen.36'],             
-    'Tercer Día de Novena',             
+    'Cuarto Día de Novena',             
     ['l','ma','mi','j','v'],   
     '19:00','20:30'),
 
