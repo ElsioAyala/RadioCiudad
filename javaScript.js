@@ -193,10 +193,10 @@ new Program(['julia', 'Laura'],
 
     new Program(
         ['Parroquia'],       
-        'Todos estamos llamados a ser santos',
+        'Buscamos ser una Iglesia comunión',
         '',
         ['parroquia.virgendelcarmen.36'],             
-        'Cuarto Día de Novena',             
+        'Quinto Día de Novena',             
         ['l','ma','mi','j','v','s','d'],   
         '19:00','20:30'),
 
@@ -297,15 +297,17 @@ new Program(
     'Música en la Ciudad',       
     ['s'],                      
     '17:10', '18:00'),
+
 new Program(
     ['autoDj'],             
-    '🕖19Hs - Transmisión Cuarto día de Novena',              
+    '🕖19Hs - Transmisión Quinto día de Novena',              
     '',                 
     ['radiociudad.radiociudad'],        
     'Música en la Ciudad',       
     ['s', 'd'],                      
     '18:00', '19:00'),
-new Program(
+
+    new Program(
     ['autoDj'],             
     '🎶🎶🎶🎶',              
     '',                 
