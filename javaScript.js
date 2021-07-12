@@ -106,7 +106,7 @@ new Program(
     ['adiociudad.radiociudad'],
     'Espacio Publicitario', 
     ['l','ma','mi','j','v'], 
-    '09:10','13:00'),
+    '09:00','09:10'),
 
 
 new Program(
@@ -183,7 +183,7 @@ new Program(['julia', 'Laura'],
 /*--------- Inicio Programación Especial ---------*/
 
     new Program(['julia', 'Laura'],       
-        '🕖 19Hs:  Transmisión Quinto dia de Novena',         
+        '🕖 19Hs:  Transmisión Sexto dia de Novena',         
         '',  
         ['100008413836572'],             
         'Che Purahéi',             
@@ -193,10 +193,10 @@ new Program(['julia', 'Laura'],
 
     new Program(
         ['Parroquia'],       
-        'Buscamos ser una Iglesia comunión',
+        'Conviértenos, Señor',
         '',
         ['parroquia.virgendelcarmen.36'],             
-        'Quinto Día de Novena',             
+        'Sexto Día de Novena',             
         ['l','ma','mi','j','v','s','d'],   
         '19:00','20:30'),
 
