@@ -183,7 +183,7 @@ new Program(['julia', 'Laura'],
 /*--------- Inicio Programación Especial ---------*/
 
     new Program(['julia', 'Laura'],       
-        '🕖 19Hs:  Transmisión Sexto dia de Novena',         
+        '🕖 19Hs:  Transmisión Séptimo dia de Novena',         
         '',  
         ['100008413836572'],             
         'Che Purahéi',             
@@ -193,10 +193,10 @@ new Program(['julia', 'Laura'],
 
     new Program(
         ['Parroquia'],       
-        'Conviértenos, Señor',
+        'Iglesia servidora de la vida y de la humanidad',
         '',
         ['parroquia.virgendelcarmen.36'],             
-        'Sexto Día de Novena',             
+        'Séptimo Día de Novena',             
         ['l','ma','mi','j','v','s','d'],   
         '19:00','20:30'),
 
