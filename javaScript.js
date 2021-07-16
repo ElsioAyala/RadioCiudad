@@ -182,7 +182,7 @@ new Program(['julia', 'Laura'],
 
 /*--------- Inicio Programación Especial ---------*/
 
-    new Program(['julia', 'Laura'],       
+    /*new Program(['julia', 'Laura'],       
         '🕖 19Hs:  Transmisión noveno dia de Novena',         
         '',  
         ['100008413836572'],             
@@ -198,7 +198,7 @@ new Program(['julia', 'Laura'],
         ['parroquia.virgendelcarmen.36'],             
         'Noveno  Día de Novena',             
         ['l','ma','mi','j','v','s','d'],   
-        '19:00','20:30'),
+        '19:00','20:30'),*/
 
 /*----------- Fin Programación Especial ---------*/
 
