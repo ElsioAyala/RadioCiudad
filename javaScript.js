@@ -195,7 +195,7 @@ new Program(['julia', 'Laura'],
         'María camina con nosotros',
         '',
         ['parroquia.virgendelcarmen.36'],             
-        'Parroquia Virgen del Carmen',             
+        '',             
         ['l','ma','mi','j','v','s','d'],   
         '16:00','17:40'),
 
