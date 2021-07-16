@@ -192,7 +192,7 @@ new Program(['julia', 'Laura'],
 
     new Program(
         ['Parroquia'],       
-        ' EN VIVO - Salón Parroquial ',
+        'EN VIVO - Parroquia Virgen del Carmen',
         '',
         ['parroquia.virgendelcarmen.36'],             
         'Festival Virtual',             
