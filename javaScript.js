@@ -145,25 +145,24 @@ new Program(
     ['l','ma','mi','j','v'],
     '14:00','16:00'),
     
-new Program(['Publi'],    
+/*new Program(['Publi'],    
     '🕓 Ya llega: ',       
     'Arriba la Tarde',  
     ['radiociudad.radiociudad'],
     'Espacio Publicitario',   
     ['l','ma','mi','j','v'],    
-    '16:00','16:10'),
+    '16:00','16:10'),*/
 
-new Program(
+/*new Program(
     ['Godoy'],            
     'Daniel  ',             
     'Godoy',            
     ['elloku'],                         
     'Arriba La Tarde 😎',     
     ['l','ma','mi','j','v'],    
-    '16:10','17:58'),
+    '16:10','17:58'),*/
 
-
-new Program(
+/*new Program(
     ['Daniel'],            
     '🕕 Ya llega: ',             
     'Che Purahéi',            
@@ -178,7 +177,7 @@ new Program(['julia', 'Laura'],
     ['100008413836572'],             
     'Che Purahéi',             
     ['l','ma','mi','j','v'],   
-    '18:00','18:55'),
+    '18:00','18:55'),*/
 
 /*--------- Inicio Programación Especial ---------*/
 
@@ -188,7 +187,7 @@ new Program(['julia', 'Laura'],
         ['100008413836572'],             
         'Che Purahéi',             
         ['l','ma','mi','j','v'],   
-        '18:55','19:00'),
+        '18:55','19:00'),*/
 
 
     new Program(
@@ -196,9 +195,9 @@ new Program(['julia', 'Laura'],
         'María camina con nosotros',
         '',
         ['parroquia.virgendelcarmen.36'],             
-        'Noveno  Día de Novena',             
+        'Parroquia Virgen del Carmen',             
         ['l','ma','mi','j','v','s','d'],   
-        '19:00','20:30'),*/
+        '16:00','17:40'),
 
 /*----------- Fin Programación Especial ---------*/
 
