@@ -192,12 +192,12 @@ new Program(['julia', 'Laura'],
 
     new Program(
         ['Parroquia'],       
-        'María camina con nosotros',
+        ' EN VIVO - Salón Parroquial ',
         '',
         ['parroquia.virgendelcarmen.36'],             
-        '',             
+        'Festival Virtual',             
         ['l','ma','mi','j','v','s','d'],   
-        '16:00','17:40'),
+        '19:00','23:59'),
 
 /*----------- Fin Programación Especial ---------*/
 
