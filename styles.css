@@ -11,7 +11,7 @@
     --background-page: url(./img/chicox.jpg);
     --marquee-elements-displayed: 1;
     --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
-    --marquee-animation-duration: calc(var(--marquee-elements) * 10s);
+    --marquee-animation-duration: calc(var(--marquee-elements) * 20s);
     --marquee-element-width-px: 500px;
 }
 
