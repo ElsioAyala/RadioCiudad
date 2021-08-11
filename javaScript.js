@@ -470,10 +470,10 @@ function arranca(data) {
         <div class="live-radio__aire--description">
             <div class="marquee">
                 <ul class="marquee-content">
-                    <li class="nombre" id="nombre" style="padding-right:30px;" data-aos="fade-right" data-aos-delay="900">${data.artist} - ${data.title}<li>
+                    <li class="nombre" id="nombre" style="padding-right:30px;">${data.artist} - ${data.title}<li>
                 </ul>
             </div>
-            <p class="conductor" data-aos="fade-left" data-aos-delay="900" id="conductor">Reconectando...</p>
+            <p class="conductor" id="conductor">Off line - Reconnecting...</p>
         </div>
         `
         programElement.innerHTML = programa;
