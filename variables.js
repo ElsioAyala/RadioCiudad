@@ -21,7 +21,6 @@ function generarAletorio(min, max){
 }
 
 
-/*responsiveMedia("(min-width: 900px)", generarAletorio(8,8), "02.jpeg");*/
 
 let fecha = new Date();
 

@@ -9,7 +9,10 @@
 
 :root{
     --background-page: url(./img/chicox.jpg);
-    /*--background-page: url(./img/Grandex.jpg);*/
+    --marquee-elements-displayed: 1;
+    --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
+    --marquee-animation-duration: calc(var(--marquee-elements) * 10s);
+    --marquee-element-width-px: 500px;
 }
 
 
@@ -136,22 +139,9 @@ body {
     ),
     var(--background-page);
     background-size: cover;
-    /*background-size: auto 100vh;*/
     background-attachment: fixed;
     background-position-x: center;
-    /*position: relative;*/
 }
-
-/*body:before {
-	content:'';
-	position: absolute;
-    top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-    background-color: rgba(0,0,0,0.6);
-    background-attachment: fixed;
-}*/
 
 footer,
 header {
@@ -163,7 +153,6 @@ a {
 }
 
 .l-container {
-    /*width: 95%;*/
     margin-left: auto;
     margin-right: auto
 }
@@ -191,23 +180,13 @@ a {
         display: -ms-flexbox;
         display: -webkit-box;
         display: flex;
-        /*justify-content: center;*/
         max-width: 1000px;
         margin-bottom: 3em;
         background: #fff;
-        /*padding: 0 4em 0 4em;*/
-        /*border-radius: 3%;*/
-        /*-ms-flex-align: center;
-        -webkit-box-align: center;*/
         align-items: center;
         justify-content: space-between;
     }
 }
-/*@media screen and (min-width: 1024px){
-    .flex{
-        justify-content: space-between;
-    }
-}*/
 
 .logo {
     width: 140px;
@@ -216,24 +195,8 @@ a {
     padding: .5em 0;
 }
 
-@media screen and (min-width: 375px) {
-    .logo {
-        /*width: 300px;*/
-        /*margin-left: auto;
-        margin-right: auto;*/
-        /*display: block;*/
-        /*margin-bottom: 12px;*/
-        /*padding-top: 10px*/
-    }
-}
-
 @media screen and (min-width: 1024px) {
     .logo {
-        /*border: none;*/
-        /*padding-bottom: 0;
-        padding-top: 0;*/
-        /*margin-bottom: 1em;
-        margin-top: 1em*/
         margin: 0;
     }
 }
@@ -252,7 +215,6 @@ a {
 .contacto{
     display: flex;
     justify-content: space-evenly;
-    /*margin-bottom: 1.5rem;*/
     width: 80%;
     margin: 0 auto 1.5rem;
 }
@@ -289,17 +251,6 @@ a {
  
 }
 
-@media screen and (min-width: 425px) {
-    .contacto__telefonos {
-        /*-ms-flex-pack: justify;
-        -webkit-box-pack: justify;*/
-        /*justify-content: center;*/
-        /*width: 300px;*/
-        /*margin: 0 auto;*/
-        
-    }
-}
-
 @media screen and (min-width: 670px) {
     .contacto__telefonos {
         display: inline
@@ -322,7 +273,6 @@ a {
 
 @media screen and (min-width: 670px) {
     .contacto__telefonos p {
-        /*margin: 8px 0;*/
         text-align: center
     }
 }
@@ -339,18 +289,10 @@ a {
     margin-top: 2em;
     width: 95%;
     color: #fff;
-    /*font-size: 1.5em;*/
-    /*-webkit-text-stroke: .5px #000;*/
     margin-left: auto;
     margin-right: auto;
-    /*border: solid 1px rgba(0, 0, 0, 0.4);*/
-    /*background: rgba(255, 255, 255, 0.7);*/
-    /*padding-bottom: 1em*/
 }
 
-/*.live {
-    background: rgba(255, 255, 255, 0.9)
-}*/
 
 @media screen and (min-width: 425px) {
     .live {
@@ -372,7 +314,6 @@ a {
 @media screen and (min-width: 425px) {
     .live-radio {
         width: 90%;
-        /*margin: 0 auto*/
     }
 }
 
@@ -408,7 +349,6 @@ a {
 .live-radio__aire--description {
     text-align: center;
     margin-bottom: 1.5em;
-    /*text-shadow: #000 1px 1px 2px;*/
 }
 
 .live-radio__aire--description .nombre {
@@ -431,7 +371,6 @@ a {
 }
 
 .live-radio__aire--description .conductor {
-    /*margin-top: 4px;*/
     margin-bottom: 0;
     font-size: 1.2em;
 }
@@ -445,7 +384,6 @@ a {
     text-align: center;
     padding-bottom: .5em;
     padding-top: .2em;
-    /*border: 1px solid #ddd;*/
     margin-bottom: 5px
 }
 
@@ -507,8 +445,6 @@ a {
 footer {
     background: #ccc;
     border-top: .5em solid #c0c0c0;
-    /*position: relative;*/
-    /*margin-top: 100%;*/
 }
 
 .footer__container {
@@ -547,30 +483,17 @@ footer {
 .mensaje {
     margin-top: 2em;
     margin-bottom: 3em;
-    /*adding-top: .2em;*/
-    /*background: rgba(255, 255, 255, 1);*/
     background-color: #f1f3f4;
     transition: all 1s;
-    /*width: 95%;*/
     margin-right: auto;
     margin-left: auto;
-    /*border: solid 1px rgba(0, 0, 0, 0.4)*/
 }
 
-/*.mensaje-container{
-    background-color: #f1f3f4;
-    width: 100%;
-}*/
 
-/*.mensaje {
-    background: rgba(255, 255, 255, 0.9)
-}*/
 
 .span::before{
     content: "⬇️";
    margin-left: .5em;
-    /*width: 50px;*/
-    /*display: inline-block;*/
 }
 
 @media screen and (min-width: 425px) {
@@ -593,7 +516,6 @@ footer {
     margin-bottom: 1em;
     padding: .3em;
     padding-top: 1em;
-    /*padding-top: .7em;*/
     border-bottom: solid 1px rgba(0, 0, 0, 0.4);
     font-family: "Relaway", sans-serif;
     color: #444;
@@ -613,11 +535,8 @@ footer {
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
-   
 }
-/*.raddios img{
-    margin-top: 2em;
-}*/
+
 @media screen and (min-width: 1485px){
     .center{
         position: absolute;
@@ -626,25 +545,14 @@ footer {
     }
 }
 .raddios{
-    /*max-width: 400px;*/
     text-align: center;
-    /*margin-top: 3em;
-    margin: 0 auto;*/
-    /*display: none;*/
+    display: none;
 }
 
 .raddios iframe{
     width: 100%;
     max-width: 500px;
 }
-/*@media screen and (min-width: 1024px){
-    .raddios{
-        position: fixed;
-        width: 300px;
-        right: 1em;
-        bottom: 8em;
-    }
-}*/
 
 @media screen and (max-width: 425px){
     .raddios{
@@ -654,7 +562,6 @@ footer {
 
 
 .social-media{
-    /*margin: 0px !important;*/
     display: none;
 }
 
@@ -663,41 +570,23 @@ footer {
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        /*margin-bottom: .5em;*/
     }
-    /*.social-media:last-child{
-        margin-bottom: 0;
-    }*/
 } 
 
 iframe{
     border: 0;
-    /*overflow: none;*/
+  
 }
 
-@media screen and (min-width: 900px){
-    body {
-       
-        /*--background-page: url(./img/Grandex.jpg);*/
-
-        /*--background-page: url(./img/grandge.jpg);*/
-        
-    }
-}
-
-/* Background Reproductor de Audio */
 div#contolBar.controlBar{
     background-color: #fff !important;
 }
 
 .social-media{
-    /*display: flex;*/
     color: #444;
     font-family: sans-serif;
-    /*display: flex;
-    align-items: center;
-    justify-content: flex-end;*/
 }
+
 .social-media-contac{
     display: flex;
     flex-direction: column;
@@ -708,8 +597,8 @@ div#contolBar.controlBar{
     color: inherit;
     font-size: 1.1em;
     margin-bottom: .4em
-    /*font-weight: bold;*/
 }
+
 .social-media-contac a:last-child {
     margin-bottom: 0;
 
@@ -720,9 +609,6 @@ div#contolBar.controlBar{
     margin-left: .5em;
 }
 
-.social-media-contac i:first-child {
-    /*margin-bottom: .5em;*/
-}
 
 @media screen and (max-width: 425px){
     .live-radio__title{
@@ -733,3 +619,42 @@ div#contolBar.controlBar{
         margin-top: 5em;
     }
 }
+
+/*-------------------Inicio Marqee---------------------*/
+.marquee {
+    width: var(--marquee-width);
+    height: var(--marquee-height);
+    color: #eee;
+    overflow: hidden;
+    position: relative;
+  }
+  .marquee:before, .marquee:after {
+    position: absolute;
+    top: 0;
+    width: 10rem;
+    height: 100%;
+    content: "";
+    z-index: 1;
+  }
+
+  .marquee-content {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    animation: scrolling var(--marquee-animation-duration) linear infinite;
+  }
+
+  @keyframes scrolling {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-1 * var(--marquee-element-width-px))); }
+  }
+  .marquee-content li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    flex-shrink: 0;
+    width: var(--marquee-element-width);
+    max-height: 100%;
+    white-space: nowrap;
+  }

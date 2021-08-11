@@ -75,6 +75,7 @@ class Program extends Person {
             </div>
             `;
         elementHTML.innerHTML = program;
+        let live = document.getElementById('live').style.opacity="1"
     }
 }
 
@@ -425,3 +426,81 @@ function ola(){
 btnActive.addEventListener("click", () =>{
     document.getElementById("btnToggle").classList.toggle("active")
 })
+
+
+const url = "https://tools.zenoradio.com/api/stations/" + "ef7d2011qtzuv" + "/now_playing/?rand=" + Math.random();
+
+/*window.addEventListener('load', () => {
+    fetch(url)
+    .then(response => response.json())
+    .then(response => {
+        console.log(response.artist)
+    })
+})*/
+
+let cond = 0
+
+
+const loadMedia = async () => {
+    const response = await fetch(url)
+    const data = await response.json()
+    if (data.artist !== "Radio Ciudad 90.5"){
+  
+        arranca(data);
+        cond = 1;
+    }else if (cond === 1){
+        cond = 0;
+        segunHora();
+    }
+
+  
+}
+
+function arranca(data) {
+
+    let nombre = document.getElementById('nombre')
+    if (nombre.innerHTML !== `${data.artist} - ${data.title}`){
+
+        let programa = `
+        <div class="containImg"> 
+            <a href="https://www.facebook.com/#" target="_blank" title="Ver perfil de Facebook"> 
+            <img class="live-radio__aire--img" src="./img/autoDj.gif" alt="Avatar"/>
+            </a>
+        </div>
+        <div class="live-radio__aire--description">
+            <div class="marquee">
+                <ul class="marquee-content">
+                    <li class="nombre" id="nombre" style="padding-right:30px;" data-aos="fade-right" data-aos-delay="900">${data.artist} - ${data.title}<li>
+                </ul>
+            </div>
+            <p class="conductor" data-aos="fade-left" data-aos-delay="900" id="conductor">Reconectando...</p>
+        </div>
+        `
+        programElement.innerHTML = programa;
+ 
+        let element = document.getElementById('nombre');
+        let elementStyle = window.getComputedStyle(element);
+
+          
+        let elementAncho = elementStyle.getPropertyValue('width');
+        if (+elementAncho.slice(0, -2) > 288) {
+            style.setProperty('--marquee-element-width-px', elementAncho);
+            document.getElementById('live').style.opacity="0"
+    
+            const marqueeContent = document.querySelector("ul.marquee-content");
+            style.setProperty("--marquee-elements", 1);
+            let nodo = marqueeContent.children[0].cloneNode(true)
+            marqueeContent.appendChild(nodo)
+            marqueeContent.children[1].style.display = "none"
+        }
+     
+
+
+    }
+
+   
+}
+
+setInterval(() => {
+    loadMedia();
+}, 20000)
