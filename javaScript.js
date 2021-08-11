@@ -492,7 +492,10 @@ function arranca(data) {
             let nodo = marqueeContent.children[0].cloneNode(true)
             marqueeContent.appendChild(nodo)
             marqueeContent.children[1].style.display = "none"
-        }
+        }else{
+            element.style.width = "100%"
+            element.style.padding = "0"
+          }
      
 
 
