@@ -444,7 +444,7 @@ let cond = 0
 const loadMedia = async () => {
     const response = await fetch(url)
     const data = await response.json()
-    if (data.artist !== "Radio Ciudad 90.5"){
+    if (data.title !== "Radio Ciudad 90.5"){
   
         arranca(data);
         cond = 1;
