@@ -444,8 +444,8 @@ let cond = 0
 const loadMedia = async () => {
     const response = await fetch(url)
     const data = await response.json()
-    if (data.title !== "Radio Ciudad 90.5"){
-  
+    console.log(data.title + " - " + data.artist)
+    if (data.title !== "Radio Ciudad 90.5" && data.title !== "Un lugar para Todos"){
         arranca(data);
         cond = 1;
     }else if (cond === 1){
