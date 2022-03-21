@@ -1,491 +1,208 @@
-class Person {
-    constructor(photo,firsName,lastName,profileFacebook){
-        this.avatar = photo;
-        this.firsName = firsName;
-        this.lastName = lastName;
-        this.profileFacebook = profileFacebook;
-        this.fullName = `${firsName} ${lastName}`;
-    }
-}
-
-class Program extends Person {
-    constructor(photo,firsName,lastName,profileFacebook,programName,days,startTime,endTime){
-        super(photo,firsName,lastName,profileFacebook);
-        this.programName = programName;
-        this.days = days;
-        this.startTime = startTime;
-        this.endTime = endTime;
-        this.hour = startTime.substr(0,2);
-        this.minutes = startTime.substr(3);
-    }
-    transformDays(array){
-        let newArray = array.map((a) =>{
-            switch (a) {
-                case 'l':
-                    return 1; 
-                    break;
-                case 'ma':
-                    return 2;
-                    break;
-                case 'mi':
-                    return 3;
-                case 'j':
-                    return 4;
-                case 'v':
-                    return 5;
-                case 's':
-                    return 6;
-                case 'd':
-                    return 0;
-                default:
-                    return 'yes';
-                    break;
-            } });
-        return newArray;
-    }
-    renderProgram(elementHTML){
-        let program = 
-        `<div class="containImg"> 
-            <a href="https://www.facebook.com/${this.profileFacebook[0]}" target="_blank" title="Ver perfil de Facebook"> 
-
-            ${this.avatar[0] == "autoDj"
-            ?   `<img class="live-radio__aire--img" src="./img/${this.avatar[0]}.gif" alt="Avatar ${this.avatar[0]}" />
-            </a>`
-            :   `<picture">
-                    <source type="image/webp" srcset="./img/${this.avatar[0]}.webp">
-                    <img class="live-radio__aire--img" src="./img/${this.avatar[0]}.jpg" alt="Avatar ${this.avatar[0]}" data-aos="flip-right" data-aos-delay="1000"/>
-                </picture>
-            </a>`
-            }
-                
-
-        ${this.avatar[1]
-            ?   `<a href="https://www.facebook.com/${this.profileFacebook[1]}" target="_blank" title="Ver perfil de Facebook"> 
-                    <picture>
-                        <source type="image/webp" srcset="./img/${this.avatar[1]}.webp">
-                        <img class="live-radio__aire--img" src="./img/${this.avatar[1]}.jpg" alt="Avatar ${this.avatar[0]}" id="imagen" data-aos="flip-right" data-aos-delay="1000"/>
-                    </picture>
-                ` 
-            :   ``}
-
-            </div></a>
-            <div class="live-radio__aire--description">
-                <p class="nombre" id="nombre" data-aos="fade-right" data-aos-delay="900">${this.programName}</p>
-                <p class="conductor" id="conductor" data-aos="fade-left" data-aos-delay="900">${this.fullName}</p>
-            </div>
-            `;
-        elementHTML.innerHTML = program;
-        let live = document.getElementById('live').style.opacity="1"
-    }
-}
-
-let programList = [  
-
-new Program(
-    ['autoDj'],             
-    '🕖7Hs - Ya llega: Amor Chamamecero',              
-    '',                 
-    ['radiociudad.radiociudad'],        
-    '🎶🎶🎶🎶',          
-    ['l','ma','mi','j','v'],    
-    '06:30','07:00'),
-
-
-    new Program(
-    /*Avatar*/  ['Juan'], 
-    /*Nombre*/  'Juan Ramón', 
-    /*Apellido*/'Villalva', 
-    /*Facebook*/['juanramon.villalva.31'], 
-    /*Programa*/'Sentimiento de Amor Chamamecero', 
-    /*Dias*/    ['l','ma','mi','j','v'],
-    /*Horario*/ '07:00', '09:00'),
-
-new Program(
-    ['Publi'], 
-    '🕘 Ya llega: A Toda Potencia ', 
-    '',
-    ['adiociudad.radiociudad'],
-    'Espacio Publicitario', 
-    ['l','ma','mi','j','v'], 
-    '09:00','09:10'),
-
-
-new Program(
-    ['Daniel', 
-    'Laura'], 
-    'Daniel Godoy - ', 
-    'Laura Medina',
-    ['elloku', '100007205203112']
-    , '🔥🔥 A Toda Potencia 💪', 
-    ['l','ma','mi','j','v'], 
-    '09:10','13:00'),
-
-new Program(
-    ['Vidente'],
-    '',
-    '',
-    ['#'],
-    'Vidente Francisco', 
-    ['l','ma','mi','j','v'],  
-    '13:00','13:28'),
-
-new Program(['Publi'],    
-    '',       
-    '🕑 14Hs ➡ Mundo Musical ',  
-    ['radiociudad.radiociudad'],
-    'Espacio Publicitario',   
-    ['l','ma','mi','j','v'],    
-    '13:30','14:00'),
-
-new Program(
-    ['Silvana','Mino'],
-    'Silvana Silva - ',
-    'Pedro Miño',
-    ['tuwachitiernasmys', 'pedro.mino.1232'],
-    'Mundo Musical ', 
-    ['l','ma','mi','j','v'],
-    '14:00','16:00'),
-    
-new Program(['Publi'],    
-    '🕓 Ya llega: ',       
-    'Arriba la Tarde',  
-    ['radiociudad.radiociudad'],
-    'Espacio Publicitario',   
-    ['l','ma','mi','j','v'],    
-    '16:00','16:10'),
-
-new Program(
-    ['Godoy'],            
-    'Daniel  ',             
-    'Godoy',            
-    ['elloku'],                         
-    'Arriba La Tarde 😎',     
-    ['l','ma','mi','j','v'],    
-    '16:10','17:58'),
-
-new Program(
-    ['Daniel'],            
-    '🕕 Ya llega: ',             
-    'Che Purahéi',            
-    ['elloku'],                         
-    'Arriba La Tarde 😎',     
-    ['l','ma','mi','j','v'],    
-    '17:58','18:00'),
-
-new Program(['julia', 'Laura'],       
-    'Julia Fernandez - ',         
-    'Laura Medina',  
-    ['100008413836572'],             
-    'Che Purahéi',             
-    ['l','ma','mi','j','v'],   
-    '18:00','18:55'),
-
-/*--------- Inicio Programación Especial ---------*/
-
-
-/*----------- Fin Programación Especial ---------*/
-
-
-new Program(
-    ['autoDj'],             
-    '🎶 🎶 🎶 🎶',              
-    '',                 
-    ['radiociudad.radiociudad'],        
-    'Música en la Ciudad',          
-    ['l','ma','mi','j','v'],    
-    '20:40','23:59'),
-
-
-new Program(
-    ['autoDj'],             
-    '🎶 🎶 🎶 🎶',              
-    '',                 
-    ['radiociudad.radiociudad'],        
-    '⭐ Música en la Ciudad ⭐',          
-    ['l','ma','mi','j','v','s'],    
-    '00:00','06:30'),
-
-new Program(
-    ['autoDj'],             
-    '🕘9Hs ➡ Un Abrazo Radical',              
-    '',                 
-    ['radiociudad.radiociudad'],        
-    '⭐ Música en la Ciudad ⭐',          
-    ['s'],    
-    '06:30','09:00'),
-
-new Program(
-    ['Daniel', 'Laura'],   
-    'Daniel Godoy &',       
-    'Laura Medina',
-    ['elloku', '100007205203112'],      
-    'Un Abrazo Radical 💯',    
-    ['s'],                      
-    '09:00','13:00'),
-
-new Program(
-    ['Publi'],             
-    'Ya llega: Variaciones Musicales',              
-    '',                 
-    ['radiociudad.radiociudad'],        
-    'Espacio Publicitario',          
-    ['s'],    
-    '13:00','13:10'),
-
-new Program(['Juan2'],              
-    'Juan Ramón Villalva',                
-    '',           
-    ['juanramon.villalva.31'],                
-    'Variaciones Musicales',           
-    ['s','d'],                      
-    '13:10','16:00'),
-
-new Program(
-    ['Jesus'],              
-    'Alicia',    
-    'Martinez',    
-    ['100000340133373'],                              
-    'Jesus es el Camino',       
-    ['s'],                  
-    '16:00','17:00'),
-
-/*new Program(
-    ['autoDj',],         
-    'Radio Ciudad',            
-    '',            
-    ['radiociudad.radiociudad'],                  
-    '🕗 8Hs - Punto de Encuentro',                       
-    ['s'],                      
-    '17:10','20:00'),
-*/
-
-
-
-/*new Program(
-    ['autoDj'],             
-    'Dardo Seitur',              
-    '',                 
-    ['radiociudad.radiociudad'],        
-    'Punto de Encuentro',                  
-    ['s'],                      
-    '20:05', '23:59'),
-*/
-
-/*------------- Inicio progranación Especial --------------*/
-
-    new Program(
-    ['autoDj'],             
-    '🎶🎶🎶🎶',              
-    '',                 
-    ['radiociudad.radiociudad'],        
-    'Música en la Ciudad',       
-    ['s', 'd'],                      
-    '20:30', '23:59'),
-
-new Program(
-    ['autoDj'],             
-    '🎶🎶🎶🎶',              
-    '',                 
-    ['radiociudad.radiociudad'],        
-    'Música en la Ciudad',            
-    ['d'],                    
-    '16:00', '18:00'),
-/*------------ Fin programación Especial -----------------*/
-
-new Program(
-    ['autoDj'],             
-    '🎶🎶🎶🎶',              
-    '',                 
-    ['radiociudad.radiociudad'],        
-    'Música en la Ciudad',       
-    ['d'],                      
-    '00:00', '13:00'),
-
-
-/*
-new Program(['Hugo'],               'Hugo',                 'Bechir',           ['100011691940069'],                'La Bailanta Chamamecera Dominguera', ['d'],            '09:00', '12:00'),*/
-/*new Program(
-    ['autoDj'],             
-    '🎶🎶🎶🎶',              
-    '',                 
-    ['radiociudad.radiociudad'],        
-    'Música en la Ciudad',            
-    ['d'],                    
-    '16:00', '23:59'),*/
-
-
-
-
-];
+let allProgramas = [];
 let currentTime = () => new Date;
-
 const programElement = document.getElementById('programContainerElement');
+let chargeProgram = false;
+const live = document.getElementById('live')
 
-let endTime = t => {
-    let time = new Date();
-    if (t.length > 4) {
-        time.setHours(t.substr(0,2));
-        time.setMinutes(t.substr(3));
-        time.setSeconds(00);
-    }else{
-        time.setHours(t.substr(0,1));
-        time.setMinutes(t.substr(2));
-        time.setSeconds(00);
-    }
-    
-    return time;
+let setTimeProgram = t => {
+    const time = new Date();
+    time.setHours(t.substr(0,2));
+    time.setMinutes(t.substr(3));
+    time.setSeconds(00);
+    return time.getTime();
 }
 
-let segunDia = (array, program )=> {
-    let a = program.transformDays(array);
-    for (const key in a) {
-        if (a[key] == currentTime().getDay()){
-            return true;
-            
+const loadProgram = async () => {
+    const response = await fetch("./programas.json");
+    const program = await response.json();
+    allProgramas = [...program];
+    programTimeMs(allProgramas)
+    currentProgram()
+}
+
+
+const currentDay = i => {
+    for (const key in allProgramas[i].days) {
+        if (allProgramas[i].days[key] == currentTime().getDay()) {
+            return true
         }
     }
-    return false;
-}
-let preparando = program => {
-    program.renderProgram(programElement);
-
-    setTimeout(()=>{
-        /*console.log(endTime(program.endTime));
-        console.log(currentTime());
-        console.log(endTime(program.endTime) - currentTime());*/
-        segunHora()}, (endTime(program.endTime) - currentTime())/* + 1000*/);
+    return false
 }
 
+let publi = false;
+const staging = (objProgram, tipo) =>{
+    if (tipo === "Publicidad"){
+        if (publi == false){
+            let element = document.getElementById("containImg")
+            containImg.remove()
+            info.remove()
+            showProgram(objProgram, "programa");
+            publi = true;
+            chargeProgram = true;
+            setTimeout(()=>{
+                currentProgram()
 
-
-
-segunHora();
-
-/*(01)*/
-function segunHora() {
-    for (const key in programList) {
-        /** Si horaActual >= horaDeInicio y horaActual < horaDeFin y diaVerdadero */
-        if (currentTime() >= endTime(programList[key].startTime) && currentTime() < endTime(programList[key].endTime) && segunDia(programList[key].days, programList[key])) {
-            var ok = true;
-            preparando(programList[key]);
-            var keySig = parseInt(key) + 1;
+            }, (1000))
+        
+        }else{
+            setTimeout(()=>{
+                currentProgram()
+            }, (60000))
             
-            AOS.init();
-            if (programList[keySig].firsName == 'Auto DJ' || programList[key].firsName == 'Auto DJ') {
-                tanda = () => new Program(['Publi'], 'Ya', 'volvemos !!', '#', 'Espacio Publicitario', '[]', '', `${currentTime().getHours()}:${currentTime().getMinutes()+2}`);
-    
-            }else{
-                console.log(`Hola probandoooooooo que   pasoooooooooooo ${programList[keySig].startTime}`)
-                tanda = () => new Program(['Publi'], 'Ya llega: ', programList[keySig].programName, '#', 'Espacio Publicitario', '[]', ``, programList[keySig].startTime);
-                AOS.init();
-            }
-            break;
-        } 
+        }
+        
+    }else if(tipo == "offLine"){
+        containImg.remove()
+        info.remove()
+        showProgram(objProgram);
+    }else{
+        containImg.remove()
+        info.remove()
+        showProgram(objProgram, "programa")
+        chargeProgram = true
+        setTimeout(()=>{
+            currentProgram()
+        }, (objProgram.ends - currentTime()))
     }
-    if(ok != true) {
+}
 
-        console.log(`${currentTime().getHours()}:${currentTime().getMinutes()+2}`)
-        let tanda = () => new Program(['Publi'], 'Ya', 'volvemos!!', '#', 'Espacio Publicitario', '[]', '', currentTime().getMinutes() <= 9 ? `${currentTime().getHours()}:0${currentTime().getMinutes()+1}` : `${currentTime().getHours()}:${currentTime().getMinutes()+1}`);
-        preparando(tanda());
+
+const currentProgram = () => {
+    for (const i in allProgramas){
+        if (currentTime() >= allProgramas[i].start && currentTime() <= allProgramas[i].ends && currentDay(i)){
+            publi = false;
+            var ok = true;
+            staging(allProgramas[i]); 
+        }
     }
+    if (ok != true){
+        let publicidad = {
+            name: "Espacio Publicitario",
+            locutor: [
+                {
+                    avatar: "Publi.jpg",
+                    profileFacebook: "radiociudad.radiociudad",
+                    fullName: "Ya volvemos!!"
+                }
+            ]
+        }
+       staging(publicidad, "Publicidad") 
+    }
+}
+
+
+
+const showProgram = (program, type) => {
+    let fullName = ""
+    let containerImg = document.createElement("div")
+    containerImg.setAttribute("class", "containImg")
+    containerImg.setAttribute("id", "containImg")
+    let img = ""
+    program.locutor.forEach( locutor => {
+        img += `
+        <a href="https://www.facebook.com/${locutor.profileFacebook}" target="_blank" title="Ver perfil de Facebook"> 
+        <picture>
+        ${locutor.avatar == "autoDj.gif" ? `<img class="live-radio__aire--img" src="./img/${locutor.avatar}" alt="Avatar ${locutor.avatar}" />` :
+        `
+            <source type="image/webp" srcset="./img/${locutor.avatar.slice(0, -4)}.webp">
+            <source type="image/jpeg" srcset="./img/${locutor.avatar}">
+            <img class="live-radio__aire--img" src="./img/${locutor.avatar}" alt="Foto ${locutor.fullName}"/>
+            </picture>
+        </a>
+        `}`
+        fullName += locutor.fullName + " & " 
+    })
+    containerImg.innerHTML = img
+    programElement.appendChild(containerImg)
+    fullName = fullName.slice(0, -2)
+    const info = document.createElement("div")
+    info.setAttribute("class", "live-radio__aire--description")
+    info.setAttribute("id", "info")
+    let infoContent
+    if (type === "programa"){ 
+        infoContent = `
+        <p class="nombre" id="nombre">${program.name}<p>
+        <p class="conductor" id="conductor">${fullName}</p>
+        `
+    }else{ 
     
-    AOS.init();
+        infoContent = `
+        <div class="marquee">
+            <ul class="marquee-content">
+                <li class="nombre" id="nombre" style="padding-right:30px;" data-aos="fade-right" data-aos-delay="900">${program.name}<li>
+            </ul>
+        </div>
+        <p class="conductor" id="conductor" data-aos="fade-left" data-aos-delay="900">${fullName}</p>
+    `}
+
+    info.innerHTML = infoContent
+    programElement.appendChild(info)
+    
 }
 
-
-
-
-// de ms A m
-let msToDateObj = ms => {
-    let seconds = Math.floor(ms / 1000),
-        minutes = Math.floor(ms / (1000 * 60)),
-        hours = Math.floor(ms / (1000 * 60 * 60));
-        /*day = Math.floor(ms / (1000 * 60 * 60 *24));*/
-    return {hours,minutes,seconds}
+/* Pasar de Horas a Milisegundos*/
+function programTimeMs(allProgramas) {
+    allProgramas.map(program => {
+        program.start = setTimeProgram(program.start)
+        program.ends = setTimeProgram(program.ends)
+        return program
+    })
 }
-
-let msToExpandedDateObj = ms => {
-    let hours = msToDateObj(ms).hours % 24;
-    let minutes = msToDateObj(ms).minutes % 60;
-    let seconds = msToDateObj(ms).seconds % 60;
-    return {hours,minutes,seconds}
-}
-
-let inicio = new Date('Sun Apr 29 2018 09:30:00 GMT-0300');
-let fin = new Date('Sun Apr 29 2018 13:00:00 GMT-0300');
-
-
-let btnActive = document.getElementById("active")
-
-
-
-function ola(){
-    alert("hola")
-}
-
-btnActive.addEventListener("click", () =>{
-    document.getElementById("btnToggle").classList.toggle("active")
-})
-
 
 const url = "https://tools.zenoradio.com/api/stations/" + "ef7d2011qtzuv" + "/now_playing/?rand=" + Math.random();
-
-/*window.addEventListener('load', () => {
-    fetch(url)
-    .then(response => response.json())
-    .then(response => {
-        console.log(response.artist)
-    })
-})*/
-
-let cond = 0
-
 
 const loadMedia = async () => {
     const response = await fetch(url)
     const data = await response.json()
-    console.log(data.title + " - " + data.artist)
-    if (data.title !== "Radio Ciudad 90.5" && data.title !== "Un lugar para Todos"){
-        arranca(data);
-        cond = 1;
-    }else if (cond === 1){
-        cond = 0;
-        segunHora();
+    console.log("DATA:", data)
+    if (data.title !== "Radio Ciudad 90.5" && data.title !== "Un lugar para Todos") {
+        chargeProgram = false;
+        loadAutoDj(data);
+    
+    }else if (chargeProgram === false){
+        loadProgram();
+        live.textContent = "en vivo"
+        live.classList.add("animation");
+       
     }
 
   
 }
 
-function arranca(data) {
+const loadAutoDj = (data) => {
+    let offLine = {
+        name: `${data.artist} - ${data.title}`,
+        /*name: `la konga - como el aire`,*/
+        locutor: [
+            {
+                avatar: "autoDj.gif",
+                profileFacebook: "radiociudad.radiociudad",
+                fullName: "Auto DJ"
+            }
+        ]
+    }
+    
 
-    let nombre = document.getElementById('nombre')
-    if (nombre.innerHTML !== `${data.artist} - ${data.title}`){
+    let nombre = "sinNombre"
+    try {
+        nombre = document.getElementById("nombre").innerHTML
+    } catch (error) {}
 
-        let programa = `
-        <div class="containImg"> 
-            <a href="https://www.facebook.com/#" target="_blank" title="Ver perfil de Facebook"> 
-            <img class="live-radio__aire--img" src="./img/autoDj.gif" alt="Avatar"/>
-            </a>
-        </div>
-        <div class="live-radio__aire--description">
-            <div class="marquee">
-                <ul class="marquee-content">
-                    <li class="nombre" id="nombre" style="padding-right:30px;">${data.artist} - ${data.title}<li>
-                </ul>
-            </div>
-            <p class="conductor" id="conductor">Off line - Reconnecting...</p>
-        </div>
-        `
-        programElement.innerHTML = programa;
- 
+  
+    if ( nombre !== `${data.artist} - ${data.title}`) {
+        live.textContent = "off line"
+        live.classList.remove('animation');
+
+
+        staging(offLine, "offLine")
         let element = document.getElementById('nombre');
         let elementStyle = window.getComputedStyle(element);
+        let elementAncho = elementStyle.getPropertyValue('width'); //ancho del li
 
-          
-        let elementAncho = elementStyle.getPropertyValue('width');
-        if (+elementAncho.slice(0, -2) > 288) {
+        if (Math.round(parseInt(elementAncho)) > 325) {//360
+            
             style.setProperty('--marquee-element-width-px', elementAncho);
-            document.getElementById('live').style.opacity="0"
     
             const marqueeContent = document.querySelector("ul.marquee-content");
             style.setProperty("--marquee-elements", 1);
@@ -493,17 +210,17 @@ function arranca(data) {
             marqueeContent.appendChild(nodo)
             marqueeContent.children[1].style.display = "none"
         }else{
+            element.removeAttribute("data-aos")
+            document.getElementById("conductor").removeAttribute("data-aos")
             element.style.width = "100%"
             element.style.padding = "0"
-          }
-     
-
-
+        }
     }
-
-   
 }
+
 
 setInterval(() => {
     loadMedia();
 }, 20000)
+
+window.onload = loadMedia;
