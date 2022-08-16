@@ -150,13 +150,14 @@ function programTimeMs(allProgramas) {
     })
 }
 
-const url = "https://tools.zenoradio.com/api/stations/" + "ef7d2011qtzuv" + "/now_playing/?rand=" + Math.random();
+/*const url = "https://tools.zenoradio.com/api/stations/" + "ef7d2011qtzuv" + "/now_playing/?rand=" + Math.random();*/
+const url = "https://tools.zenoradio.com/api/stations/" + "afnx6011qtzuv" + "/now_playing/?rand=" + Math.random();
 
 const loadMedia = async () => {
     const response = await fetch(url)
     const data = await response.json()
     console.log("DATA:", data)
-    if (data.title !== "Radio Ciudad 90.5" && data.title !== "Un lugar para Todos") {
+    if (/*data.title !== "Radio Ciudad 90.5" && data.title !== "Un lugar para Todos"*/ false) {
         chargeProgram = false;
         loadAutoDj(data);
     
