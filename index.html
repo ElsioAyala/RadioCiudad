@@ -37,6 +37,11 @@
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    <!-- Required Core Stylesheet -->
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+    <!-- Optional Theme Stylesheet -->
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
+
    
     
     
@@ -53,7 +58,7 @@
     <title>Radio Ciudad de Sauce 90.5 | Un lugar para todos</title>
     <meta name="description" content="🎧Estamos en el Aire❗ Radio Ciudad - Un lugar para Todos 🥇 Sauce Correintes">
     <meta name="aplication-name" content="Radio Ciudad de Sauce 90.5 | Un lugar para todos">
-    <link rel="stylesheet" href="iconos/style.css">
+    <!--<link rel="stylesheet" href="iconos/style.css">-->
     <link rel="stylesheet" href="./styles.css">
 
     <link rel="stylesheet" href="whatsapp.css">
@@ -124,16 +129,19 @@
     </header>
 
 
-    <div class="raddios">
+    <!--<div class="raddios">
         <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fparroquia.virgendelcarmen.36%2Fvideos%2F556727545329720%2F&show_text=false&width=560&t=0" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-    </div>
+    </div>-->
     
 
     <div class="live" data-aos="zoom-in" data-aos-delay="200">
         <div class="l-container">
             <div class="live-slideshow"></div>
             <div class="live-radio">
-                <h3 class="live-radio__title" id="live">En vivo</h3>
+                
+                
+                
+                <!--<h3 class="live-radio__title" id="live">En vivo</h3>
                 <div class="live-radio__aire" id="programContainerElement">
                     <div class="containImg" id="containImg">
                     </div>
@@ -148,9 +156,48 @@
                     <source src="http://stream.zeno.fm/afnx6011qtzuv" type="audio/aac">
                 </video>
 
-              
-         
-      
+            -->
+
+                <div class="glide">
+                    <div class="glide__track" data-glide-el="track">
+                      <ul class="glide__slides">
+                        <div class="cargando">
+                            <div class="loadingio-spinner-pulse-8xm12tyxpn8"><div class="ldio-3k6tj0bxhgs">
+                            <div></div><div></div><div></div></div></div>
+                        </div>
+                        <!--<li class="glide__slide">
+                            <h3 class="live-radio__title" id="live">En vivo</h3>
+                            <div class="live-radio__aire" id="programContainerElement">
+                                <div class="containImg" id="containImg">
+                                </div>
+                                <div class="live-radio__aire--description" id="info">
+                                    <div class="loadingio-spinner-pulse-8xm12tyxpn8"><div class="ldio-3k6tj0bxhgs">
+                                    <div></div><div></div><div></div></div></div>
+                                </div>
+                            </div>
+                    
+                            
+                            <video autoplay controls style="height: 40px; width: 100%;">
+                                <source src="http://stream.zeno.fm/afnx6011qtzuv" type="audio/aac">
+                            </video>
+                        </li>
+                        <li class="glide__slide">1</li>
+                        <li class="glide__slide">2</li>
+                        <li class="glide__slide">3</li>-->
+                    
+                      </ul>
+                     
+                    </div>
+
+                    <div class="glide__arrows" data-glide-el="controls">
+                        <i class="glide__arrow glide__arrow--left fa-solid fa-chevron-left" data-glide-dir="<"></i>
+                        <i class="glide__arrow glide__arrow--right fa-solid fa-chevron-right" data-glide-dir=">"></i>
+                    </div>
+                  </div>
+                  
+                  <video autoplay controls style="height: 40px; width: 100%;">
+                    <source src="http://stream.zeno.fm/afnx6011qtzuv" type="audio/aac">
+                </video>
 
             </div>
         </div>
@@ -160,7 +207,7 @@
             <div class="mensaje-widget">
                 <h3 class="mensaje-widget__title">Dejanos Tu Mensaje <span id="active" class="span"></span> </h3>
                 <div class="mensaje-widget__sumary">
-                    <div class="fb-comments" data-href="https://radiociudad905.com.ar" data-width="100%" data-numposts="11" data-order-by="reverse_time" data-colorscheme="light"></div>
+                    <div class="fb-comments" data-href="https://radiociudad905.com.ar" data-width="100%" data-numposts="11" data-order-by="reverse_time" data-colorscheme="dark"></div>
                     
                 </div>
             </div>
@@ -170,7 +217,7 @@
         <div class="l-container">
             <div class="footer__container">
                 <div class="footer__container--legal">
-                    <div>Radio Ciudad - Copyright (c) 2021 Copyright Holder All Rights Reserved. </div>
+                    <div>Radio Ciudad - Copyright (c) 2022 Copyright Holder All Rights Reserved. </div>
                 </div>
                 <div class="footer__container--powered">
                     <div class="footer__container--powered_by">
@@ -198,6 +245,11 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./javaScript.js"></script>
     <script src="./variables.js"></script>
+    <script src="https://kit.fontawesome.com/be0b6b45d6.js" crossorigin="anonymous"></script>
+    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
+    <!--<script>
+        new Glide('.glide').mount()
+      </script>-->
 
     <script>
         AOS.init();
