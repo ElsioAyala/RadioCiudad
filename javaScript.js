@@ -28,6 +28,8 @@ const loadProgram = async () => {
     /*programTimeMs(allProgramas)*/
     /*currentProgram()*/
     showP(allProgramas)
+    /*marquee()*/
+
 }
 
 
@@ -45,8 +47,9 @@ const waiting = (objProgram) =>{
 const showP = (programs) => {
     
     const fragment = document.createDocumentFragment();
-    let position
+    let position = 0
     let status
+    let i = 0
     programs.forEach((program, index) => {
         let inicio = ''
         let fin = ''
@@ -63,32 +66,40 @@ const showP = (programs) => {
         if(Math.sign(program.start.substr(3,1)) !== 0) inicio += program.start.substr(2,3)
         
 
+        
         if(Math.sign(program.ends.substr(0,1)) === 0) fin = program.ends.substr(1,1)
         else fin = program.ends.substr(0,2)
         if(Math.sign(program.ends.substr(3,1)) !== 0) fin += program.ends.substr(2,3)
+        if (program.ends === "23:59") fin = "0"
         
 
         console.log(inicio)
-        if (currentTime() >=  setTimeProgram(program.start) && currentTime() <= setTimeProgram(program.ends)) waiting(program), status = "live", position = index
+        if (currentTime() >=  setTimeProgram(program.start) && currentTime() <= setTimeProgram(program.ends)) waiting(program), status = "live" /*position = index*/
         const listSlide = document.createElement('li')
         listSlide.setAttribute('class', 'glide__slide')
         console.log(program)
 
+      
+
         /**** Inicio Extraer Imagen/es y Nombre/s del locutor/es ****/
+      
+
         let fullName = "";
         let img = "";
+        let gif = "";
+        let jpg = "";
         program.locutor.forEach((locutor) => {
+            gif = `<img class="live-radio__aire--img" src="./img/${locutor.avatar}" alt="Avatar ${locutor.avatar}" />`
+            jpg = `<source type="image/webp" srcset="./img/${locutor.avatar.slice(0, -4)}.webp">
+                    <source type="image/jpeg" srcset="./img/${locutor.avatar}">
+                    <img class="live-radio__aire--img" src="./img/${locutor.avatar}" alt="Foto ${locutor.fullName}"/>`
             img += `
             <a href="https://www.facebook.com/${locutor.profileFacebook}" target="_blank" title="Ver perfil de Facebook"> 
-            <picture>
-            ${locutor.avatar == "autoDj.gif" ? `<img class="live-radio__aire--img" src="./img/${locutor.avatar}" alt="Avatar ${locutor.avatar}" />` :
-            `
-                <source type="image/webp" srcset="./img/${locutor.avatar.slice(0, -4)}.webp">
-                <source type="image/jpeg" srcset="./img/${locutor.avatar}">
-                <img class="live-radio__aire--img" src="./img/${locutor.avatar}" alt="Foto ${locutor.fullName}"/>
+                <picture>
+                ${locutor.avatar === "autoDj.gif" ? gif : jpg}
                 </picture>
-            </a>
-            `}`
+            </a>`
+            
             fullName += locutor.fullName + " & " 
         })
         /**** Fin Extraer Imagen/es y Nombre/s del locutor/es ****/
@@ -107,13 +118,28 @@ const showP = (programs) => {
             <div class="live-radio__aire" id="programContainerElement">
                 <div class="containImg" id="containImg">${img}</div>
                 <div class="live-radio__aire--description" id="info">
-                    <p class="nombre" id="nombre">${program.name}<p>
+
+                <div class="marquee" id="marquee">
+                <ul class="marquee-content">
+
+                    <li class="nombre" id="nombre">${program.name}<li>
+
+                </ul>
+                </div>
+
                     <p class="conductor" id="conductor">${dia === '' ? '' : horario } ${fullName.slice(0, -2)}</p>
                 </div>
             </div>      
                   
         `
+        
+        /*if(program.name === 'Espacio Publicitario' && status !== 'live'){
+            console.log("index inicial", index)
+            console.log("index final", index)
+        }*/
+        
         if (status === 'live'){
+            position = i
             status = 'continuation'
         }else if (status === 'continuation'){
             status = 'later'
@@ -123,20 +149,123 @@ const showP = (programs) => {
             status = ''
         }*/
         
+       
+       
+        if(program.name !== 'Espacio Publicitario'){
+            listSlide.innerHTML = structure
+            fragment.appendChild(listSlide)
+            i += 1
+            /*espacioPublicitario += 1*/
+        }
         
-        listSlide.innerHTML = structure
-        fragment.appendChild(listSlide)
+        if(program.name === 'Espacio Publicitario' && status === 'continuation'){
+            listSlide.innerHTML = structure
+            fragment.appendChild(listSlide)
+            /*espacioPublicitario += 1*/
+            i += 1
+        }
+
+        
+       
         
        
         
     })
 
-    document.querySelector('.cargando').remove()
+
+
+    try {
+        document.querySelector('.cargando').remove()
+      } catch (error) {
+        console.error(error);
+      }
     glide__slides.appendChild(fragment)
+    console.log("")
     new Glide('.glide', {
-        startAt: position
+        startAt: position 
     }).mount()
+        marquee();
+
     
+}
+
+const marquee = () => {
+
+    
+
+    //detectar el ancho del texto
+    let element = document.getElementById('nombre');
+    let elementStyle = window.getComputedStyle(element);
+    let elementAncho = elementStyle.getPropertyValue('width');
+
+    let elements = document.querySelectorAll("#nombre")
+    let contents = document.querySelectorAll(".marquee-content")
+  
+    /*console.log('ancho del texto', elements);*/
+
+    /**Ancho del contenedor */
+    let marqueeElement = document.getElementById('marquee');
+    let marqueeElementStyle = window.getComputedStyle(marqueeElement);
+    let marqueeElementAncho = marqueeElementStyle.getPropertyValue('width');
+    console.log("ancho del elemento ", marqueeElementAncho )
+
+    /**contenedor main */
+
+    elements.forEach((element, index) => {
+        let ancho = window.getComputedStyle(element).getPropertyValue('width');
+        console.log("ancho del texto", ancho)
+
+        if (+ancho.slice(0, -2) > +marqueeElementAncho.slice(0, -2)){
+            /*style.setProperty('--marquee-width-element', elementAncho);
+            style.setProperty('--marquee-width-text', marqueeElementAncho);*/
+            /*let contenedor = document.querySelector(".marquee")*/
+            /*element.style.paddingLeft = "10px";
+            element.style.paddingRight = "10px";*/
+
+            let diferencia = `${marqueeElementAncho.slice(0, -2) - elementAncho.slice(0, -2)}px`
+            contents[index].animate([
+                { transform: 'translateX(0)'},
+                { transform: `translateX(${marqueeElementAncho.slice(0, -2) - ancho.slice(0, -2) }px)`},
+                { transform: 'translateX(0)'}
+              ],{
+                // opciones de sincronización
+                duration: 15000,
+                iterations: Infinity,
+              })
+            /*console.log("ancho del texto mayor a 420", ancho)
+            console.log(diferencia)*/
+              
+          
+          }else{
+            /*element.style.width = "100%"
+            element.style.padding = "0"*/
+            /*console.log("ancho del texto menor a 420", ancho)*/
+        
+          }
+
+          
+        if(element.firstChild.data === "Radio Ciudad Music"){
+            console.log("Elements Encontado", element.parentElement.parentElement.parentElement.previousElementSibling.firstElementChild.firstElementChild.firstElementChild.style.border = "none")
+        }
+    })
+
+
+
+        /*if (Math.round(parseInt(elementAncho)) > 325) {//360
+            
+            style.setProperty('--marquee-element-width-px', elementAncho);
+    
+            const marqueeContent = document.querySelector("ul.marquee-content");
+            style.setProperty("--marquee-elements", 1);
+            let nodo = marqueeContent.children[0].cloneNode(true)
+            marqueeContent.appendChild(nodo)
+            marqueeContent.children[1].style.display = "none"
+        }else{
+            element.removeAttribute("data-aos")
+            document.getElementById("conductor").removeAttribute("data-aos")
+            element.style.width = "100%"
+            element.style.padding = "0"
+        }*/
 }
 
 
@@ -274,7 +403,7 @@ const showProgram = (program, type) => {
 /*const url = "https://tools.zenoradio.com/api/stations/" + "ef7d2011qtzuv" + "/now_playing/?rand=" + Math.random();*/
 /*const url = "https://tools.zenoradio.com/api/stations/" + "afnx6011qtzuv" + "/now_playing/?rand=" + Math.random();*/
 
-const loadMedia = async () => {
+const loadMedia = () => {
    console.log("load Media")
     if (chargeProgram === false){
         loadProgram();
@@ -333,9 +462,10 @@ const loadMedia = async () => {
 }
 */
 
-setInterval(() => {
-    loadMedia();
-}, 20000)
+
+
+
+
 
 window.onload = loadMedia;
 

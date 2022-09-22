@@ -377,7 +377,7 @@ a {
     .live-radio__aire--img {
         width: 168px;
         height: 168px;
-        border: rgba(255, 255, 255, 0.30) 10px solid;
+        border: rgba(255, 255, 255, 0.20) 12px solid;
     }
     /*.live-radio__aire--description .nombre{
         font-size: 2em;
@@ -718,9 +718,10 @@ div#contolBar.controlBar{
     align-items: center;
     text-align: center; 
     flex-shrink: 0;
-    width: var(--marquee-element-width);
+    /*width: var(--marquee-element-width);*/
     max-height: 100%;
     white-space: nowrap;
+    padding: 0 10px;
   }
   
 
@@ -807,13 +808,13 @@ div#contolBar.controlBar{
     .glide__arrow--left {
         left: .5em;
         font-size: 30px;
-        opacity: .3;
+        /*opacity: .3;*/
       }
     
       .glide__arrow--right {
         right: .5em;
         font-size: 30px;
-        opacity: .3;
+        /*opacity: .3;*/
       }
     
       .glide__arrow--left:hover, .glide__arrow--right:hover{
