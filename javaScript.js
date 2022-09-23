@@ -70,7 +70,7 @@ const showP = (programs) => {
         if(Math.sign(program.ends.substr(0,1)) === 0) fin = program.ends.substr(1,1)
         else fin = program.ends.substr(0,2)
         if(Math.sign(program.ends.substr(3,1)) !== 0) fin += program.ends.substr(2,3)
-        if (program.ends === "23:59") fin = "0"
+        if (program.ends === "24:00") fin = "0"
         
 
         console.log(inicio)
@@ -151,14 +151,14 @@ const showP = (programs) => {
         
        
        
-        if(program.name !== 'Espacio Publicitario'){
+        if(program.name !== 'Espacio Publicitario' && program.name !== 'Radio Ciudad Music'){
             listSlide.innerHTML = structure
             fragment.appendChild(listSlide)
             i += 1
             /*espacioPublicitario += 1*/
         }
         
-        if(program.name === 'Espacio Publicitario' && status === 'continuation'){
+        if((program.name === 'Espacio Publicitario' && status === 'continuation') || (program.name === 'Radio Ciudad Music' && status === 'continuation') ){
             listSlide.innerHTML = structure
             fragment.appendChild(listSlide)
             /*espacioPublicitario += 1*/
