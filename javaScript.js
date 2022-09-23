@@ -133,11 +133,6 @@ const showP = (programs) => {
                   
         `
         
-        /*if(program.name === 'Espacio Publicitario' && status !== 'live'){
-            console.log("index inicial", index)
-            console.log("index final", index)
-        }*/
-        
         if (status === 'live'){
             position = i
             status = 'continuation'
