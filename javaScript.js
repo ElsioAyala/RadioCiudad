@@ -176,7 +176,7 @@ const showP = (programs) => {
       }
     glide__slides.appendChild(fragment)
     console.log("")
-    new Glide('.glide', {
+    let glideProgram = new Glide('.glide', {
         startAt: position 
     }).mount()
         marquee();
