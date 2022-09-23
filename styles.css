@@ -396,12 +396,12 @@ a {
 }
 
 .live-radio__aire--description .nombre {
-    font-size: .9em;
+    /*font-size: .9em;*/
     font-family: "Raleway", sans-serif;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 700;
     margin: 1em 0 .2em;
-    font-size: 1.3em;
+    font-size: 1.4em;
     white-space: nowrap;
 }
 
@@ -422,7 +422,7 @@ a {
         font-size: 2em;
         margin-bottom: .2em;
         margin-top: .7em;
-        font-weight: 700;
+        /*font-weight: 700;*/
     }
     .live-radio__aire--description .conductor{
         font-size: 1.2em;
@@ -678,7 +678,7 @@ div#contolBar.controlBar{
 
 @media screen and (max-width: 425px){
     .live-radio__title{
-        font-size: .8rem;
+        font-size: .9rem;
     }
 
    
