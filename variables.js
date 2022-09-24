@@ -40,7 +40,7 @@ if (hora >= 6 && hora <= 18) {
     responsiveMedia("(min-width: 900px)", generarAletorio(5,5));
     loadBing()
 }else if(hora >= 19 && hora <= 21){
-    responsiveMedia("(min-width: 900px)", generarAletorio(8,8));
+    responsiveMedia("(min-width: 900px)", generarAletorio(5,5));
 }else{
     responsiveMedia("(min-width: 900px)", generarAletorio(6,7));
 }
