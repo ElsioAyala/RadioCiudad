@@ -1,6 +1,5 @@
 const style = document.documentElement.style;
 
-/*style.setProperty('--background-page', 'url(./img/022.jpg)');*/
 
 const loadBing = async () => {
     const response = await fetch('https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=es-ES')
