@@ -217,11 +217,12 @@ const marquee = () => {
                 iterations: Infinity,
               })
 
-            contents[index].firstElementChild.style.paddingRight = '10px'
-            contents[index].firstElementChild.style.paddingLeft = '10px'
+            /*contents[index].firstElementChild.style.paddingRight = '10px'
+            contents[index].firstElementChild.style.paddingLeft = '10px'*/
               
           }else{
-        
+            contents[index].lastElementChild.style.paddingRight = '0px'
+            contents[index].lastElementChild.style.paddingLeft = '0px'
           }
 
           

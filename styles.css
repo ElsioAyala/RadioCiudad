@@ -726,9 +726,9 @@ div#contolBar.controlBar{
   }
 
   @media screen and (min-width:1024px){
-    /*.marquee-content li {
+    .marquee-content li {
         padding: 0 10px
-    }*/
+    }
   }
 
 
