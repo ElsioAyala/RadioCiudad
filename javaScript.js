@@ -25,6 +25,11 @@ const loadProgram = async () => {
     allProgramas = [...program];
     filter(allProgramas)
     showP(allProgramas)
+    /*lista = document.querySelectorAll(".marquee-content")
+    lista.forEach(li =>{
+        console.log(li.lastElementChild)
+    })
+    console.log("ULTIMO", lista)*/
 }
 
 
@@ -158,7 +163,7 @@ const showP = (programs) => {
     })
 
 
-
+    
     try {
         document.querySelector('.cargando').remove()
       } catch (error) {
@@ -211,6 +216,10 @@ const marquee = () => {
                 duration: 15000,
                 iterations: Infinity,
               })
+
+            contents[index].firstElementChild.style.paddingRight = '10px'
+            contents[index].firstElementChild.style.paddingLeft = '10px'
+              
           }else{
         
           }
@@ -220,6 +229,8 @@ const marquee = () => {
             console.log("Elements Encontado", element.parentElement.parentElement.parentElement.previousElementSibling.firstElementChild.firstElementChild.firstElementChild.style.border = "none")
         }
     })
+
+    
 
 }
 
