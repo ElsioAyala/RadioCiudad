@@ -56,8 +56,8 @@ const showP = (programs) => {
         let dia = ''
         if( program.name === 'Espacio Publicitario' || program.name === 'Radio Ciudad' || program.name === 'Radio Ciudad Music')dia = ''
         else if(program.days.length >= 4)dia = 'Lu a Vie'
-        else if ( program.days[0] === '5')dia = 'Sáb'
-        else if ( program.days[0] === '6')dia = 'Dom'
+        else if ( program.days[0] === '6')dia = 'Sáb'
+        else if ( program.days[0] === '0')dia = 'Dom'
         
        
 
