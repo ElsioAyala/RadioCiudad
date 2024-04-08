@@ -154,13 +154,13 @@ const showP = (programs) => {
       status = "later";
     }
 
-    if (program.name !== "Espacio Publicitario" && program.name !== "Radio Ciudad Music") {
+    if (program.name !== "Espacio Publicitario" && program.name !== "Radio Ciudad Music" && program.name !== "Radio Ciudad") {
       listSlide.innerHTML = structure;
       fragment.appendChild(listSlide);
       i += 1;
     }
 
-    if ((program.name === "Espacio Publicitario" && status === "continuation") || (program.name === "Radio Ciudad Music" && status === "continuation")) {
+    if ((program.name === "Espacio Publicitario" && status === "continuation") || (program.name === "Radio Ciudad Music" && status === "continuation") || (program.name === "Radio Ciudad" && status === "continuation")) {
       listSlide.innerHTML = structure;
       fragment.appendChild(listSlide);
       i += 1;
@@ -227,12 +227,18 @@ const marquee = () => {
 
 let publi = false;
 
-const loadMedia = () => {
+/*const loadMedia = () => {
   if (chargeProgram === false) {
     getWordTime().then(() => {
       console.log(currentTime, day);
       loadProgram();
     });
+  }
+};*/
+
+const loadMedia = () => {
+  if (chargeProgram === false) {
+    getWordTime().then(loadProgram);
   }
 };
 
