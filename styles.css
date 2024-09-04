@@ -133,7 +133,7 @@ body {
   height: 100%;
   margin: 0;
   font-family: "Raleway", sans-serif;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), var(--background-page);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), var(--background-page);
   background-size: cover;
   /*background-size: auto 100vh;*/
   background-attachment: fixed;
