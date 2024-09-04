@@ -133,7 +133,7 @@ body {
   height: 100%;
   margin: 0;
   font-family: "Raleway", sans-serif;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), var(--background-page);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), var(--background-page);
   background-size: cover;
   /*background-size: auto 100vh;*/
   background-attachment: fixed;
@@ -356,14 +356,14 @@ a {
   display: block;
   width: 128px;
   height: 128px;
-  border: rgba(255, 255, 255, 0.2) 8px solid;
+  border: rgba(255, 255, 255, 0.2) 4px solid;
   transition: all 0.2s;
 }
 @media screen and (min-width: 1024px) {
   .live-radio__aire--img {
     width: 168px;
     height: 168px;
-    /*border: rgba(255, 255, 255, 0.2) 12px solid;*/
+    border: rgba(255, 255, 255, 0.2) 8px solid;
   }
   /*.live-radio__aire--description .nombre{
         font-size: 2em;
