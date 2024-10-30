@@ -5,20 +5,22 @@ let allProgramas = [];
 const getWordTime = async () => {
   try {
     const response = await fetch("https://worldtimeapi.org/api/timezone/America/Argentina/Buenos_Aires");
-    const timeWord = await response.json();
+
     if (!response.ok) {
-      console.error("No se pudo trear los datos desde wordTimeApi. Por lo tanto se está usando la hora del sistema.");
-      let date = new Date();
-      currentTime = date;
-      day = date.getDay();
-      return date;
+      throw new Error('Error en la respuesta de la API "wordTimeApi"');
     }
+    const timeWord = await response.json();
     let date = new Date(timeWord.datetime);
     currentTime = date;
     day = date.getDay();
     return date;
   } catch (error) {
-    console.error(error);
+    console.error("Error al obtener la hora:", error);
+    console.log("*** No se pudo obtener la hora desde wordTimeApi. Por lo tanto se usara la hora del sistema. ***");
+    let date = new Date();
+    currentTime = date;
+    day = date.getDay();
+    return date;
   }
 };
 
@@ -29,11 +31,11 @@ const glide__slides = document.querySelector(".glide__slides");
 
 let setTimeProgram = (t) => {
   const time = new Date(currentTime);
-  console.log("TIME ACTUAL ---> ", time);
+  /*console.log("TIME ACTUAL ---> ", time);*/
   time.setHours(t.substr(0, 2));
   time.setMinutes(t.substr(3));
   time.setSeconds(0);
-  console.log("TIME RESULTANTE ---> ", time);
+  /*console.log("TIME RESULTANTE ---> ", time);*/
   return time.getTime();
 };
 
@@ -45,7 +47,7 @@ const loadProgram = async () => {
   const response = await fetch("./programas.json");
   const program = await response.json();
   allProgramas = [...program];
-  console.log("TODOS LOS PROGRAMAS: ", allProgramas);
+  /*console.log("TODOS LOS PROGRAMAS: ", allProgramas);*/
   filter(allProgramas);
   showP(allProgramas);
 };
@@ -53,7 +55,7 @@ const loadProgram = async () => {
 const waiting = (objProgram) => {
   let end = setTimeProgram(objProgram.ends);
   end += 30000;
-  console.log("Tiempo de espera: ", end - currentTime);
+  /*console.log("Tiempo de espera: ", end - currentTime);*/
   setTimeout(() => {
     let glide = document.querySelectorAll(".glide__slide");
     glide.forEach((ele) => ele.remove());
@@ -64,10 +66,10 @@ const waiting = (objProgram) => {
 };
 
 const showP = (programs) => {
-  console.log("show programas del dia: ", programs);
+  /*console.log("show programas del dia: ", programs);*/
 
   filteredPrograms = programs.filter((program) => currentTime <= setTimeProgram(program.ends));
-  console.log("show programas del dia Actual y futuros: ", filteredPrograms);
+  /*console.log("show programas del dia Actual y futuros: ", filteredPrograms);*/
   const fragment = document.createDocumentFragment();
   let position = 0;
   let status;
@@ -90,12 +92,12 @@ const showP = (programs) => {
     if (Math.sign(program.ends.substr(3, 1)) !== 0) fin += program.ends.substr(2, 3);
     if (program.ends === "24:00") fin = "0";
 
-    console.log(inicio);
-    console.log("buscando el live: ", currentTime >= setTimeProgram(program.start) && currentTime <= setTimeProgram(program.ends));
+    /*console.log(inicio);
+    console.log("buscando el live: ", currentTime >= setTimeProgram(program.start) && currentTime <= setTimeProgram(program.ends));*/
     if (currentTime >= setTimeProgram(program.start) && currentTime <= setTimeProgram(program.ends)) waiting(program), (status = "live"); /*position = index*/
     const listSlide = document.createElement("li");
     listSlide.setAttribute("class", "glide__slide");
-    console.log(program);
+    /*console.log(program);*/
 
     /**** Inicio Extraer Imagen/es y Nombre/s del locutor/es ****/
 
@@ -173,7 +175,7 @@ const showP = (programs) => {
     console.error(error);
   }
   glide__slides.appendChild(fragment);
-  console.log("");
+  /*console.log("");*/
   let glideProgram = new Glide(".glide", {
     /*startAt: position,*/
     rewind: false,
@@ -196,13 +198,13 @@ const marquee = () => {
   let marqueeElement = document.getElementById("marquee");
   let marqueeElementStyle = window.getComputedStyle(marqueeElement);
   let marqueeElementAncho = marqueeElementStyle.getPropertyValue("width");
-  console.log("ancho del elemento ", marqueeElementAncho);
+  /*console.log("ancho del elemento ", marqueeElementAncho);*/
 
   /**contenedor main */
 
   elements.forEach((element, index) => {
     let ancho = window.getComputedStyle(element).getPropertyValue("width");
-    console.log("ancho del texto", ancho);
+    /*console.log("ancho del texto", ancho);*/
 
     if (+ancho.slice(0, -2) > +marqueeElementAncho.slice(0, -2)) {
       let diferencia = `${marqueeElementAncho.slice(0, -2) - elementAncho.slice(0, -2)}px`;
@@ -220,7 +222,7 @@ const marquee = () => {
     }
 
     if (element.firstChild.data === "Radio Ciudad Music") {
-      console.log("Elements Encontado", (element.parentElement.parentElement.parentElement.previousElementSibling.firstElementChild.firstElementChild.firstElementChild.style.border = "none"));
+      /* console.log("Elements Encontado", (element.parentElement.parentElement.parentElement.previousElementSibling.firstElementChild.firstElementChild.firstElementChild.style.border = "none"));*/
     }
   });
 };
