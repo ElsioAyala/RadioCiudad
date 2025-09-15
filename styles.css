@@ -853,3 +853,7 @@ div#contolBar.controlBar {
     margin-left: -55px;
   }
 }
+
+audio {
+  width: 100%;
+}
