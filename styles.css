@@ -111,9 +111,9 @@ a {
   }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1200px) {
   .live {
-    border-radius: 5%;
+    max-width: 600px;
   }
 }
 .live-radio {
@@ -174,13 +174,13 @@ a {
   border: rgba(255, 255, 255, 0.2) 4px solid;
   transition: all 0.2s;
 }
-@media screen and (min-width: 1024px) {
+/*@media screen and (min-width: 1024px) {
   .live-radio__aire--img {
     width: 168px;
     height: 168px;
     border: rgba(255, 255, 255, 0.2) 8px solid;
   }
-}
+}*/
 .live-radio__aire--img:hover {
   cursor: pointer;
   background-color: rgb(255 255 255 / 49%);
@@ -196,9 +196,9 @@ a {
 .live-radio__aire--description .nombre {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
-  font-weight: 700;
-  margin: 1em 0 0.2em;
-  font-size: 1.4em;
+  font-weight: 800;
+  margin: 1rem 0 0.2rem;
+  font-size: 1.4rem;
   white-space: nowrap;
 }
 
@@ -208,20 +208,49 @@ a {
   font-family: sans-serif;
 }
 
-@media screen and (min-width: 362px) {
+@media screen and (min-width: 360px) {
+  .live-radio__aire--description .nombre {
+    font-size: 1.8rem;
+    margin-bottom: 0.3rem;
+    margin-top: 2.5rem;
+  }
   .live-radio__aire--description .conductor {
-    font-size: 1.1em;
+    font-size: 1.2rem;
+  }
+  .live-radio__aire--img {
+    width: 150px;
+    height: 150px;
+    border: rgba(255, 255, 255, 0.2) 8px solid;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .live-radio__aire--description .nombre {
-    font-size: 2em;
+    font-size: 2rem;
     margin-bottom: 0.2em;
-    margin-top: 0.7em;
+    /* margin-top: 0.7em;*/
   }
   .live-radio__aire--description .conductor {
     font-size: 1.2em;
+  }
+  .live-radio__aire--img {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .live-radio__aire--description .nombre {
+    font-size: 2.5rem;
+    /*margin-bottom: 0.2em;*/
+    /* margin-top: 0.7em;*/
+  }
+  .live-radio__aire--description .conductor {
+    font-size: 1.5rem;
+  }
+  .live-radio__aire--img {
+    width: 200px;
+    height: 200px;
   }
 }
 
