@@ -189,7 +189,6 @@ a {
     display: -webkit-box;
     display: flex;
     max-width: 1000px;
-    background: #fff;
     align-items: center;
     justify-content: space-between;
   }
@@ -209,7 +208,7 @@ a {
 }
 
 .main-header {
-  background: #fff;
+  background: #e2e2e2;
 }
 
 @media screen and (min-width: 1000px) {
