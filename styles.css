@@ -639,21 +639,43 @@ div#contolBar.controlBar {
 .social-media-contac {
   display: flex;
   flex-direction: column;
-  text-align: right;
+  /*text-align: right;*/
 }
 
 .social-media-contac a {
   color: inherit;
   font-size: 1.1em;
-  margin-bottom: 0.4em;
+  margin-bottom: 0.2em;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  cursor: pointer;
 }
 .social-media-contac a:last-child {
   margin-bottom: 0;
 }
 
-.social-media-contac i {
+.social-media-contac svg {
   margin-right: 0.5em;
   margin-left: 0.5em;
+  width: 24px;
+  height: 24px;
+  fill: #333333;
+  transition: fill 0.3s ease;
+}
+
+.social-media-contac a:hover {
+  color: rgb(31, 31, 31);
+}
+
+.social-media-contac a:first-child:hover svg {
+  fill: #0602fc; /* Color de Instagram, por ejemplo */
+}
+.social-media-contac a:nth-child(2):hover svg {
+  fill: #890087; /* Color de Instagram, por ejemplo */
+}
+.social-media-contac a:last-child:hover svg {
+  fill: #958600; /* Color de Instagram, por ejemplo */
 }
 
 @keyframes breath {
