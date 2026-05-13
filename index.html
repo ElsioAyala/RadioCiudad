@@ -41,8 +41,8 @@
     <!--<link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">-->
     <!-- Optional Theme Stylesheet -->
     <!--<link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css">-->
-    <link rel="stylesheet" href="./glide.core.min.css" />
-    <link rel="stylesheet" href="./glide.theme.min.css" />
+    <!--<link rel="stylesheet" href="./glide.core.min.css" />-->
+    <!--<link rel="stylesheet" href="./glide.theme.min.css" />-->
 
     <meta property="og:title" content="Radio Ciudad 90.5 " />
     <meta property="og:type" content="website" />
@@ -57,11 +57,21 @@
       content="¿Aburrido de la misma radio de siempre? Sintoniza Radio Ciudad 90.5mhz y prepárate para disfrutar de la radio líder en Sauce Corrientes Argentina 🥇. Tenemos programas para todos los gustos: actualidad, noticias, entretenimiento y la mejor música. Desde el chamamé hasta el rock, pasando por la cumbia, el trap y el pop. Radio Ciudad 90.5mhz: un lugar para todos. 🎶📻🎶
     " />
     <meta name="aplication-name" content="Radio Ciudad de Sauce 90.5 | Un lugar para todos" />
-    <!--<link rel="stylesheet" href="iconos/style.css">-->
+
+    <link
+      rel="preload"
+      href="styles.css"
+      as="style"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      " />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./styles.css" />
+
+    <!--  <link rel="stylesheet" href="./styles.css" />-->
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89562150-1"></script>
