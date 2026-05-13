@@ -1,35 +1,38 @@
-.float{
-	position:fixed;
-	width:60px;
-	height:60px;
-	bottom:40px;
-	right:40px;
-	background-color:#25d366;
-	color:#FFF;
-	border-radius:50px;
-	text-align:center;
-  	font-size:30px;
-  	z-index:100;
+.float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.float svg {
+  fill: #ffffff;
+  width: 40px;
+  height: 40px;
 }
 .float:hover {
-	text-decoration: none;
-	color: #25d366;
-  	background-color:#fff;
+  background-color: #fff;
 }
 
-.my-float{
-	display: flex !important;
-	justify-content: center;
-	align-items:center;
-	height:100%;
-	width: 100%;
+.float:hover svg {
+  fill: #25d366;
 }
 
-@media screen and (max-width: 425px){
-	.float{
-		height: 50px;
-		width: 50px;
-		bottom:30px;
-		right:30px;
-	}
+@media screen and (max-width: 425px) {
+  .float {
+    height: 50px;
+    width: 50px;
+    bottom: 30px;
+    right: 30px;
+  }
 }
